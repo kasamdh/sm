@@ -1189,14 +1189,14 @@
             content: "";
         }
 
-        /* --- Education, Testimonials, Pricing & FAQ Sections --- */
-        .blog-grid, .pricing-grid {
+        /* --- Pricing & FAQ Sections --- */
+        .pricing-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 25px;
         }
 
-        .blog-card, .pricing-card {
+        .pricing-card {
             background-color: var(--white);
             border: 1px solid var(--gray-border);
             border-radius: var(--radius-md);
@@ -1204,43 +1204,26 @@
             transition: var(--transition);
         }
 
-        .blog-card:hover, .pricing-card:hover {
+        .pricing-card:hover {
             border-color: var(--primary-red);
             box-shadow: var(--shadow-md);
             transform: translateY(-4px);
         }
 
-        .content-label {
-            display: inline-block;
-            color: var(--primary-red);
-            font-size: 0.75rem;
-            font-weight: 800;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .blog-card h3, .pricing-card h3 {
+        .pricing-card h3 {
             color: var(--dark-black);
             font-size: 1.2rem;
             margin-bottom: 12px;
         }
 
-        .blog-card p, .pricing-card p {
+        .pricing-card p {
             color: var(--text-muted);
             font-size: 0.92rem;
         }
 
-        .why-choose-grid, .virtual-rehab-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 30px;
-            align-items: stretch;
-        }
-
         .benefit-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 18px;
         }
 
@@ -1266,51 +1249,6 @@
         .benefit-card p {
             color: var(--text-muted);
             font-size: 0.88rem;
-        }
-
-        .testimonial-panel, .coaching-panel {
-            background: var(--dark-black);
-            color: var(--white);
-            border-radius: var(--radius-md);
-            padding: 32px;
-            border-left: 5px solid var(--primary-red);
-        }
-
-        .testimonial-panel h3, .coaching-panel h3 {
-            font-size: 1.45rem;
-            margin-bottom: 12px;
-        }
-
-        .testimonial-panel > p, .coaching-panel > p {
-            color: #CBD5E0;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-card {
-            background: var(--soft-black);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: var(--radius-sm);
-            padding: 18px;
-        }
-
-        .testimonial-card + .testimonial-card {
-            margin-top: 14px;
-        }
-
-        .testimonial-card i {
-            color: var(--primary-red);
-            margin-bottom: 8px;
-        }
-
-        .testimonial-card p {
-            color: #E2E8F0;
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-        }
-
-        .testimonial-card span {
-            color: #A0AEC0;
-            font-size: 0.78rem;
         }
 
         .pricing-card {
@@ -1394,55 +1332,6 @@
             color: var(--text-muted);
             font-size: 0.92rem;
             padding-bottom: 18px;
-        }
-
-        .coaching-panel .coaching-list {
-            list-style: none;
-            margin: 22px 0 28px;
-        }
-
-        .coaching-panel .coaching-list li {
-            color: #E2E8F0;
-            margin-bottom: 13px;
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-        }
-
-        .coaching-panel .coaching-list i {
-            color: var(--primary-red);
-            margin-top: 5px;
-        }
-
-        .virtual-benefits {
-            display: grid;
-            gap: 16px;
-        }
-
-        .virtual-benefit {
-            background: var(--white);
-            border: 1px solid var(--gray-border);
-            border-radius: var(--radius-md);
-            padding: 22px;
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .virtual-benefit i {
-            color: var(--primary-red);
-            font-size: 1.35rem;
-            margin-top: 4px;
-        }
-
-        .virtual-benefit h4 {
-            color: var(--dark-black);
-            margin-bottom: 4px;
-        }
-
-        .virtual-benefit p {
-            color: var(--text-muted);
-            font-size: 0.88rem;
         }
 
         /* --- Appointment & Contact Section --- */
@@ -1694,7 +1583,7 @@
         }
 
         @media (max-width: 992px) {
-            .contact-grid, .about-showcase-grid, .about-approach-grid, .why-choose-grid, .virtual-rehab-grid {
+            .contact-grid, .about-showcase-grid, .about-approach-grid {
                 grid-template-columns: 1fr;
             }
             .clinical-services-grid {
@@ -1706,11 +1595,11 @@
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            .blog-grid, .pricing-grid {
+            .pricing-grid {
                 grid-template-columns: 1fr;
             }
             .benefit-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
@@ -1888,7 +1777,7 @@
             .carousel-dot.is-active {
                 width: 28px;
             }
-            .blog-card, .pricing-card {
+            .pricing-card {
                 padding: 24px 20px;
             }
             .contact-info-panel, .appointment-panel {
@@ -1941,8 +1830,6 @@
                     <div class="nav-more-menu" id="moreMenu" aria-label="More navigation">
                         <a href="#pricing">Pricing</a>
                         <a href="#faq">FAQ</a>
-                        <a href="#blog">Blog</a>
-                        <a href="#virtual-rehab">Virtual Rehab Coaching</a>
                         <a href="#why-choose-us">Why Choose Us</a>
                         <a href="#location">Location</a>
                     </div>
@@ -2296,81 +2183,36 @@
         </div>
     </section>
 
-
-
-
-
-    <!-- Blog & Education Section -->
-    <section id="blog" class="section alt-bg">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Movement & Recovery Resources</h2>
-                <p style="color: var(--text-muted);">Practical guidance to help you feel prepared and supported between visits.</p>
-                <div class="divider-red"></div>
-            </div>
-
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <span class="content-label">Getting Started</span>
-                    <h3>How to Prepare for Your First Physical Therapy Visit</h3>
-                    <p>Learn what to bring, what to wear, and how to make the most of your initial evaluation.</p>
-                </article>
-                <article class="blog-card">
-                    <span class="content-label">Pain Education</span>
-                    <h3>Understanding the Difference Between Soreness and Pain</h3>
-                    <p>Use your body's signals to guide activity safely and know when it is time to contact your therapist.</p>
-                </article>
-                <article class="blog-card">
-                    <span class="content-label">Home Exercise</span>
-                    <h3>Building a Sustainable Home Exercise Routine</h3>
-                    <p>Simple habits can help make your prescribed movement plan easier to follow consistently.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <!-- Why Choose Us & Testimonials Section -->
     <section id="why-choose-us" class="section">
         <div class="container">
             <div class="section-title text-center">
                 <h2>Why Choose Source Motion</h2>
-                <p style="color: var(--text-muted);">Care built around your goals, your movement, and your life.</p>
+                <p style="color: var(--text-muted);">Simple payment, personal attention, and care that meets you where you are.</p>
                 <div class="divider-red"></div>
             </div>
 
-            <div class="why-choose-grid">
-                <div class="benefit-grid">
-                    <div class="benefit-card">
-                        <i class="fa-solid fa-user-group"></i>
-                        <h3>1-on-1 Attention</h3>
-                        <p>Focused visits that prioritize your questions, progress, and individual recovery goals.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fa-solid fa-person-walking-arrow-right"></i>
-                        <h3>Movement-First Plans</h3>
-                        <p>Thoughtful exercise, education, and progressive care designed to support everyday function.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fa-solid fa-house-chimney-medical"></i>
-                        <h3>Care That Fits Your Life</h3>
-                        <p>In-clinic guidance paired with home-program support to keep your progress moving forward.</p>
-                    </div>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                    <h3>Cash-Based Physical Therapy</h3>
+                    <p>Direct-pay care keeps treatment focused on your goals, with clear pricing and no insurance visit limits guiding your plan.</p>
                 </div>
-
-                <aside class="testimonial-panel" aria-labelledby="patient-stories-title">
-                    <h3 id="patient-stories-title">Patient Stories</h3>
-                    <p>Real patient feedback is important. Add approved testimonials here as they become available.</p>
-                    <div class="testimonial-card">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <p>Approved patient testimonial placeholder</p>
-                        <span>Replace with a verified patient quote and permissioned attribution.</span>
-                    </div>
-                    <div class="testimonial-card">
-                        <i class="fa-solid fa-quote-left"></i>
-                        <p>Approved patient testimonial placeholder</p>
-                        <span>Replace with a verified patient quote and permissioned attribution.</span>
-                    </div>
-                </aside>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+                    <h3>No Insurance Hassle</h3>
+                    <p>No insurance claims or billing paperwork to manage. Payment is handled directly so you can focus on your care.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                    <h3>1:1 Care</h3>
+                    <p>Your visit is dedicated to you, with time for questions, hands-on care, movement training, and progress-based planning.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fa-solid fa-house-chimney-medical" aria-hidden="true"></i>
+                    <h3>Home-Based Service</h3>
+                    <p>Home-based physical therapy brings personalized care to you when traveling to a clinic is difficult or home is the best setting for your goals.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -2454,54 +2296,6 @@
                     <summary>Can virtual rehab coaching be right for me?</summary>
                     <p>Virtual coaching may be appropriate for some patients and goals. Your therapist can help determine whether it fits your plan of care.</p>
                 </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- Virtual Rehab Coaching Section -->
-    <section id="virtual-rehab" class="section alt-bg">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Virtual Rehab Coaching</h2>
-                <p style="color: var(--text-muted);">Guided recovery support, wherever you are.</p>
-                <div class="divider-red"></div>
-            </div>
-
-            <div class="virtual-rehab-grid">
-                <div class="coaching-panel">
-                    <h3>Stay Connected to Your Progress</h3>
-                    <p>Virtual coaching can complement your care with structured support for movement, consistency, and your home program.</p>
-                    <ul class="coaching-list">
-                        <li><i class="fa-solid fa-circle-check"></i><span>Convenient check-ins focused on the goals in your care plan.</span></li>
-                        <li><i class="fa-solid fa-circle-check"></i><span>Clear guidance for completing prescribed exercises confidently at home.</span></li>
-                        <li><i class="fa-solid fa-circle-check"></i><span>Coaching options considered when appropriate for your individual needs.</span></li>
-                    </ul>
-                    <a href="#appointment" class="btn btn-primary">Ask About Virtual Coaching</a>
-                </div>
-
-                <div class="virtual-benefits">
-                    <div class="virtual-benefit">
-                        <i class="fa-solid fa-video"></i>
-                        <div>
-                            <h4>Movement Check-Ins</h4>
-                            <p>Review your form, answer questions, and make sure your program still supports your goals.</p>
-                        </div>
-                    </div>
-                    <div class="virtual-benefit">
-                        <i class="fa-solid fa-list-check"></i>
-                        <div>
-                            <h4>Personalized Home Program</h4>
-                            <p>Stay organized with a plan that fits the progress you are making between visits.</p>
-                        </div>
-                    </div>
-                    <div class="virtual-benefit">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <div>
-                            <h4>Progress Coaching</h4>
-                            <p>Maintain momentum with practical guidance, accountability, and clear next steps.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
