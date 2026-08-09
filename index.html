@@ -167,22 +167,6 @@
             color: var(--white);
         }
 
-        .social-links .patient-portal-link {
-            width: auto;
-            height: 32px;
-            padding: 0 10px;
-            border-radius: 16px;
-            color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.2px;
-            text-transform: uppercase;
-        }
-
-        .social-links .patient-portal-link i {
-            margin-right: 5px;
-        }
-
         /* --- Navbar --- */
         .navbar {
             background-color: var(--white);
@@ -732,6 +716,20 @@
             color: var(--primary-red);
         }
 
+        .about-welcome-slogan {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 12px;
+            padding: 7px 15px;
+            border: 1px solid #f5b5c0;
+            border-radius: 999px;
+            background: #fff0f2;
+            color: var(--primary-red);
+            font-size: clamp(0.9rem, 1.45vw, 1.08rem);
+            font-weight: 800;
+            letter-spacing: 0.35px;
+        }
+
         .about-showcase-grid {
             display: grid;
             grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
@@ -1187,45 +1185,6 @@
             font-size: 0.92rem;
         }
 
-        /* --- Patient Resources & Portal Section --- */
-        .resource-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-            gap: 25px;
-        }
-
-        .resource-box {
-            background-color: var(--white);
-            border: 2px dashed var(--gray-border);
-            padding: 30px;
-            border-radius: var(--radius-md);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .resource-box:hover {
-            border-color: var(--primary-red);
-            background-color: #FFF5F5;
-        }
-
-        .resource-box i {
-            font-size: 2.5rem;
-            color: var(--dark-black);
-            margin-bottom: 15px;
-        }
-
-        .resource-box h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--dark-black);
-        }
-
-        .resource-box p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
-
         /* --- Education, Testimonials, Pricing & FAQ Sections --- */
         .blog-grid, .pricing-grid {
             display: grid;
@@ -1604,7 +1563,7 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr 1fr;
             gap: 40px;
             padding-bottom: 50px;
         }
@@ -1755,9 +1714,6 @@
                 width: 36px;
                 height: 36px;
             }
-            .social-links .patient-portal-link {
-                height: 36px;
-            }
             .section-title {
                 margin-bottom: 35px;
             }
@@ -1902,10 +1858,10 @@
             .carousel-dot.is-active {
                 width: 28px;
             }
-            .services-grid, .resource-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
-            .service-card, .resource-box, .blog-card, .pricing-card {
+            .service-card, .blog-card, .pricing-card {
                 padding: 24px 20px;
             }
             .contact-info-panel, .appointment-panel {
@@ -1936,7 +1892,6 @@
                 <div class="social-links" aria-label="Social media links">
                     <a href="https://www.facebook.com/people/Source-Motion-Physical-Therapy/61592243127452/" target="_blank" rel="noopener noreferrer" aria-label="Visit Source Motion Physical Therapy on Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/sourcemotionpt/" target="_blank" rel="noopener noreferrer" aria-label="Visit Source Motion Physical Therapy on Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#portal" class="patient-portal-link"><i class="fa-solid fa-user"></i> Patient Portal</a>
                 </div>
             </div>
         </div>
@@ -2062,6 +2017,7 @@
             <div class="about-welcome">
                 <p class="about-welcome-kicker">Welcome to</p>
                 <h2 id="about-welcome-title">Source Motion <span>Physical Therapy</span></h2>
+                <p class="about-welcome-slogan">Rehab with Monika</p>
                 <div class="divider-red"></div>
             </div>
 
@@ -2278,46 +2234,9 @@
         </div>
     </section>
 
-    <!-- Patient Portal & Resources Section (Mediciti Feature) -->
-    <section id="portal" class="section">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Patient Portal & Resources</h2>
-                <p style="color: var(--text-muted);">Access patient information, intake documentation, and clinic guidance.</p>
-                <div class="divider-red"></div>
-            </div>
 
-            <div class="resource-grid">
-                <div class="resource-box">
-                    <i class="fa-solid fa-file-signature"></i>
-                    <h4>New Patient Intake Forms</h4>
-                    <p>Download and complete your health history form prior to your first appointment.</p>
-                    <a href="#" class="btn btn-outline btn-block" onclick="alert('Intake form request initialized.'); return false;"><i class="fa-solid fa-download"></i> Download PDF</a>
-                </div>
 
-                <div class="resource-box">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Insurance & Billing Info</h4>
-                    <p>Review accepted insurance plans and out-of-network payment procedures.</p>
-                    <a href="#contact" class="btn btn-outline btn-block"><i class="fa-solid fa-circle-info"></i> View Details</a>
-                </div>
 
-                <div class="resource-box">
-                    <i class="fa-solid fa-house-medical-treatment"></i>
-                    <h4>Home Exercise Portal</h4>
-                    <p>Access customized video demonstrations assigned by Dr. Monika Pokhrel, PT, DPT.</p>
-                    <a href="#" class="btn btn-outline btn-block" onclick="alert('Patient Exercise Portal Login Required.'); return false;"><i class="fa-solid fa-lock"></i> Patient Login</a>
-                </div>
-
-                <div class="resource-box">
-                    <i class="fa-solid fa-circle-question"></i>
-                    <h4>Frequently Asked Questions</h4>
-                    <p>Answers regarding what to wear, session duration, and treatment expectations.</p>
-                    <a href="#faq" class="btn btn-outline btn-block"><i class="fa-solid fa-comments"></i> Read FAQ</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Blog & Education Section -->
     <section id="blog" class="section alt-bg">
@@ -2649,15 +2568,6 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Dr. Monika Pokhrel, PT, DPT</a></li>
                     <li><a href="#services">Clinical Services</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Patient Portal</h4>
-                <ul>
-                    <li><a href="#portal">Intake Documentation</a></li>
-                    <li><a href="#portal">Exercise Portal</a></li>
-                    <li><a href="#appointment">Schedule Evaluation</a></li>
                 </ul>
             </div>
 
