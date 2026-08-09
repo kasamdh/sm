@@ -222,6 +222,80 @@
             width: 100%;
         }
 
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-more-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 5px 0;
+            border: 0;
+            background: transparent;
+            color: var(--dark-black);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .nav-more-toggle:hover,
+        .nav-more-toggle:focus-visible,
+        .nav-dropdown.is-open .nav-more-toggle {
+            color: var(--primary-red);
+            outline: none;
+        }
+
+        .nav-more-toggle i {
+            font-size: 0.76em;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-dropdown.is-open .nav-more-toggle i {
+            transform: rotate(180deg);
+        }
+
+        .nav-more-menu {
+            position: absolute;
+            z-index: 1001;
+            top: calc(100% + 13px);
+            right: -16px;
+            display: none;
+            min-width: 260px;
+            padding: 8px 0;
+            border: 1px solid var(--gray-border);
+            border-top: 3px solid var(--primary-red);
+            border-radius: var(--radius-sm);
+            background: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-dropdown.is-open .nav-more-menu {
+            display: grid;
+        }
+
+        .nav-more-menu a {
+            display: flex;
+            min-height: 42px;
+            align-items: center;
+            padding: 10px 18px;
+            color: var(--dark-black);
+            font-size: 0.92rem;
+        }
+
+        .nav-more-menu a:hover,
+        .nav-more-menu a:focus-visible {
+            background: #fff0f2;
+            color: var(--primary-red);
+            outline: none;
+        }
+
+        .nav-more-menu a::after {
+            display: none;
+        }
+
         .nav-actions {
             display: flex;
             align-items: center;
@@ -901,31 +975,6 @@
             }
         }
 
-        .about-section-heading {
-            max-width: 780px;
-            margin: 0 auto 44px;
-            text-align: center;
-        }
-
-        .about-section-heading h2 {
-            color: var(--dark-black);
-            font-size: clamp(1.9rem, 3.7vw, 3rem);
-            line-height: 1.15;
-        }
-
-        .about-section-heading p {
-            margin-top: 12px;
-            color: var(--text-muted);
-        }
-
-        .about-expertise-grid,
-        .about-conditions-grid {
-            display: grid;
-            gap: 22px;
-        }
-
-        .about-expertise-card,
-        .about-condition-card,
         .about-story-card {
             border: 1px solid var(--gray-border);
             border-radius: var(--radius-md);
@@ -943,18 +992,6 @@
             background: #fff0f2;
             color: var(--primary-red);
             font-size: 1.2rem;
-        }
-
-        .about-condition-card h3 {
-            margin-bottom: 10px;
-            color: var(--dark-black);
-            font-size: 1.15rem;
-            line-height: 1.3;
-        }
-
-        .about-condition-card p {
-            color: var(--text-muted);
-            font-size: 0.94rem;
         }
 
         .about-approach-grid {
@@ -985,68 +1022,6 @@
             color: var(--dark-black) !important;
             font-size: 1.05rem;
             font-weight: 800;
-        }
-
-        .about-expertise-grid {
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
-            padding: 0;
-            list-style: none;
-        }
-
-        .about-expertise-card {
-            display: flex;
-            align-items: center;
-            gap: 13px;
-            padding: 18px;
-            background: var(--white);
-            color: var(--dark-black);
-            font-size: 0.94rem;
-            font-weight: 700;
-        }
-
-        .about-expertise-card i {
-            display: inline-flex;
-            flex: 0 0 38px;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: #fff0f2;
-            color: var(--primary-red);
-        }
-
-        .about-conditions-grid {
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-        }
-
-        .about-condition-card {
-            padding: 30px 26px;
-            background: var(--white);
-        }
-
-        .about-condition-card ul {
-            display: grid;
-            gap: 9px;
-            list-style: none;
-        }
-
-        .about-condition-card li {
-            position: relative;
-            padding-left: 20px;
-            color: var(--text-muted);
-            font-size: 0.93rem;
-        }
-
-        .about-condition-card li::before {
-            position: absolute;
-            top: 0.53em;
-            left: 0;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--primary-red);
-            content: "";
         }
 
         .about-prose {
@@ -1104,55 +1079,114 @@
             border-color: var(--primary-red-hover);
         }
 
-        /* --- Services Grid --- */
-        .services-grid {
+        /* --- Clinical Services Cards --- */
+        .clinical-services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
         }
 
-        .service-card {
-            background: var(--white);
+        .clinical-service-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            overflow: hidden;
             border: 1px solid var(--gray-border);
             border-top: 4px solid var(--dark-black);
-            padding: 35px 25px;
             border-radius: var(--radius-md);
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
 
-        .service-card:hover {
+        .clinical-service-card:hover {
             border-top-color: var(--primary-red);
-            transform: translateY(-5px);
             box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
         }
 
-        .s-icon {
-            width: 60px;
-            height: 60px;
-            background-color: var(--dark-black);
-            color: var(--white);
-            border-radius: var(--radius-sm);
+        .clinical-service-media {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: var(--dark-black);
+        }
+
+        .clinical-service-media::after {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(17, 17, 17, 0.04), rgba(17, 17, 17, 0.4));
+            content: "";
+        }
+
+        .clinical-service-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .clinical-service-card--pelvic img {
+            object-position: center 42%;
+        }
+
+        .clinical-service-card--tmj img {
+            object-position: center 48%;
+        }
+
+        .clinical-service-card--burn img {
+            object-position: center 52%;
+        }
+
+        .clinical-service-card--specialized img {
+            object-position: center 54%;
+        }
+
+        .clinical-service-content {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            transition: var(--transition);
+            flex: 1;
+            flex-direction: column;
+            padding: 26px 24px 28px;
         }
 
-        .service-card:hover .s-icon {
-            background-color: var(--primary-red);
-        }
-
-        .service-card h3 {
-            font-size: 1.25rem;
-            color: var(--dark-black);
+        .clinical-service-content h3 {
             margin-bottom: 12px;
+            color: var(--dark-black);
+            font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+            line-height: 1.25;
         }
 
-        .service-card p {
+        .clinical-service-content > p {
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .clinical-service-list {
+            display: grid;
+            gap: 9px;
+            margin-top: auto;
+            list-style: none;
+        }
+
+        .clinical-service-list li {
+            position: relative;
+            padding-left: 17px;
             color: var(--text-muted);
-            font-size: 0.92rem;
+            font-size: 0.89rem;
+            line-height: 1.4;
+        }
+
+        .clinical-service-list li::before {
+            position: absolute;
+            top: 0.47em;
+            left: 0;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--primary-red);
+            content: "";
         }
 
         /* --- Education, Testimonials, Pricing & FAQ Sections --- */
@@ -1620,6 +1654,31 @@
                 align-items: center;
                 padding: 12px 0;
             }
+            .nav-dropdown {
+                width: 100%;
+            }
+            .nav-more-toggle {
+                width: 100%;
+                min-height: 44px;
+                justify-content: space-between;
+                padding: 12px 0;
+            }
+            .nav-more-menu {
+                position: static;
+                min-width: 0;
+                padding: 0 0 8px 20px;
+                border: 0;
+                border-left: 2px solid var(--gray-border);
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .nav-dropdown.is-open .nav-more-menu {
+                display: grid;
+            }
+            .nav-more-menu a {
+                min-height: 40px;
+                padding: 9px 0;
+            }
             .nav-links.active {
                 display: flex;
             }
@@ -1637,6 +1696,9 @@
         @media (max-width: 992px) {
             .contact-grid, .about-showcase-grid, .about-approach-grid, .why-choose-grid, .virtual-rehab-grid {
                 grid-template-columns: 1fr;
+            }
+            .clinical-services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
             .about-profile-card {
                 max-width: 390px;
@@ -1738,10 +1800,7 @@
         }
 
         @media (max-width: 600px) {
-            .about-expertise-grid, .about-conditions-grid {
-                grid-template-columns: 1fr;
-            }
-            .about-story-card, .about-condition-card {
+            .about-story-card {
                 padding: 26px 22px;
             }
             .about-slider-slide {
@@ -1749,6 +1808,13 @@
             }
             .about-slider-controls {
                 gap: 10px;
+            }
+            .clinical-services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .clinical-service-content {
+                padding: 24px 22px;
             }
             .brand-logo-img {
                 height: 68px;
@@ -1773,9 +1839,6 @@
         @media (max-width: 480px) {
             .about-slider-intro h3 {
                 letter-spacing: -1px;
-            }
-            .about-section-heading {
-                margin-bottom: 32px;
             }
             .about-cta-panel {
                 padding: 32px 22px;
@@ -1825,10 +1888,7 @@
             .carousel-dot.is-active {
                 width: 28px;
             }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .service-card, .blog-card, .pricing-card {
+            .blog-card, .pricing-card {
                 padding: 24px 20px;
             }
             .contact-info-panel, .appointment-panel {
@@ -1873,13 +1933,20 @@
             
             <nav class="nav-links" id="navLinks">
                 <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#blog">Blog</a>
-                <a href="#why-choose-us">Why Choose Us</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#faq">FAQ</a>
-                <a href="#virtual-rehab">Virtual Rehab Coaching</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <div class="nav-dropdown">
+                    <button type="button" class="nav-more-toggle" id="moreToggle" aria-expanded="false" aria-haspopup="true" aria-controls="moreMenu">More <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <div class="nav-more-menu" id="moreMenu" aria-label="More navigation">
+                        <a href="#pricing">Pricing</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#virtual-rehab">Virtual Rehab Coaching</a>
+                        <a href="#why-choose-us">Why Choose Us</a>
+                        <a href="#location">Location</a>
+                    </div>
+                </div>
             </nav>
 
             <div class="nav-actions">
@@ -2036,74 +2103,6 @@
         </div>
     </section>
 
-    <section class="section alt-bg" aria-labelledby="expertise-title">
-        <div class="container">
-            <div class="about-section-heading">
-                <h2 id="expertise-title">Areas of Expertise</h2>
-                <p>Care is tailored to each patient's condition, goals, and daily life.</p>
-                <div class="divider-red"></div>
-            </div>
-
-            <ul class="about-expertise-grid">
-                <li class="about-expertise-card"><i class="fa-solid fa-person-dress" aria-hidden="true"></i><span>Women's Health Physical Therapy</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-person-circle-check" aria-hidden="true"></i><span>Pelvic Floor Rehabilitation</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-bone" aria-hidden="true"></i><span>Orthopedic Physical Therapy</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-brain" aria-hidden="true"></i><span>Neurological Rehabilitation</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Dry Needling</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-hands" aria-hidden="true"></i><span>Manual Therapy</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-kit-medical" aria-hidden="true"></i><span>Post-Surgical Rehabilitation</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-person-running" aria-hidden="true"></i><span>Sports Injury Rehabilitation</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i><span>Burn Rehabilitation</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-face-grin-beam" aria-hidden="true"></i><span>TMJ and Jaw Dysfunction Rehabilitation</span></li>
-                <li class="about-expertise-card"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i><span>Strength, Mobility, and Functional Rehabilitation</span></li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section" aria-labelledby="conditions-title">
-        <div class="container">
-            <div class="about-section-heading">
-                <h2 id="conditions-title">Conditions Treated by Dr. Monika Pokhrel, PT, DPT</h2>
-                <p>Rehabilitation plans support recovery, confidence, and a return to meaningful movement.</p>
-                <div class="divider-red"></div>
-            </div>
-
-            <div class="about-conditions-grid">
-                <article class="about-condition-card">
-                    <h3>Orthopedic &amp; Pain Conditions</h3>
-                    <ul>
-                        <li>Back and neck pain</li>
-                        <li>Shoulder, knee, and hip pain</li>
-                        <li>Joint and muscle pain</li>
-                        <li>Muscle tightness and trigger points</li>
-                        <li>TMJ and jaw pain</li>
-                    </ul>
-                </article>
-                <article class="about-condition-card">
-                    <h3>Sports &amp; Post-Surgical Rehabilitation</h3>
-                    <ul>
-                        <li>ACL injuries and reconstruction</li>
-                        <li>Sports injuries</li>
-                        <li>Return-to-sport rehabilitation</li>
-                        <li>Post-operative rehabilitation</li>
-                        <li>Strength and mobility limitations</li>
-                    </ul>
-                </article>
-                <article class="about-condition-card">
-                    <h3>Neurological &amp; Specialized Care</h3>
-                    <ul>
-                        <li>Stroke recovery</li>
-                        <li>Neurological impairments</li>
-                        <li>Balance and mobility concerns</li>
-                        <li>Burn rehabilitation</li>
-                        <li>Pelvic floor dysfunction</li>
-                        <li>Urinary leakage, incontinence, urgency, and frequency</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <section class="section alt-bg" aria-labelledby="approach-title">
         <div class="container about-approach-grid">
             <div class="about-prose">
@@ -2135,51 +2134,164 @@
     </section>
     </div>
 
-    <!-- Comprehensive Clinical Services -->
-    <section id="services" class="section alt-bg">
+    <!-- Our Services -->
+    <section id="services" class="section alt-bg clinical-services-section" aria-labelledby="services-title">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Specialized Clinical Services</h2>
-                <p style="color: var(--text-muted);">Evidence-based treatment protocols designed for functional restoration.</p>
+                <h2 id="services-title">Our Services</h2>
+                <p style="color: var(--text-muted);">Explore individualized care options, the conditions they support, and the movement goals they are designed to serve.</p>
                 <div class="divider-red"></div>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="s-icon"><i class="fa-solid fa-bone"></i></div>
-                    <h3>Orthopedic Therapy</h3>
-                    <p>Comprehensive rehabilitation for joint pain, spine disorders, shoulder, knee, and hip conditions.</p>
-                </div>
+            <div class="clinical-services-grid">
+                <article class="clinical-service-card clinical-service-card--pelvic">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/hero-pelvic-floor.png" alt="Woman receiving supportive pelvic floor physical therapy" width="1600" height="900" fetchpriority="high">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Women's &amp; Pelvic Health</h3>
+                        <p>Private, respectful physical therapy designed to support pelvic-floor strength, comfort, control, and confident movement. Care is individualized to help you feel supported at every stage.</p>
+                        <ul class="clinical-service-list">
+                            <li>Women's health physical therapy</li>
+                            <li>Pelvic floor rehabilitation</li>
+                            <li>Pelvic floor dysfunction</li>
+                            <li>Urinary leakage, incontinence, urgency, and frequency</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="service-card">
-                    <div class="s-icon"><i class="fa-solid fa-person-running"></i></div>
-                    <h3>Sports Injury Rehab</h3>
-                    <p>Tailored motion therapy for active individuals and athletes returning to competitive performance.</p>
-                </div>
+                <article class="clinical-service-card">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/hero-orthopedic-rehab.png" alt="Physical therapist guiding orthopedic rehabilitation" width="1600" height="900" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Orthopedic Therapy &amp; Manual Care</h3>
+                        <p>Comprehensive rehabilitation for joint, spine, and muscle concerns, combining movement-based treatment with hands-on techniques to restore more comfortable, capable movement.</p>
+                        <ul class="clinical-service-list">
+                            <li>Orthopedic physical therapy</li>
+                            <li>Manual therapy and joint mobilization</li>
+                            <li>Back and neck pain</li>
+                            <li>Shoulder, knee, and hip pain</li>
+                            <li>Joint and muscle pain</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="service-card">
-                    <div class="s-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
-                    <h3>Manual Joint Mobilization</h3>
-                    <p>Hands-on physical therapy techniques targeting joint stiffness and tissue restriction.</p>
-                </div>
+                <article class="clinical-service-card">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/hero-exercise-rehab.png" alt="Guided exercise rehabilitation session" width="1600" height="900" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Sports Injury &amp; Functional Strength</h3>
+                        <p>Tailored rehabilitation for active individuals and athletes who want to rebuild strength, improve control, and return to sport, work, and daily activities with confidence.</p>
+                        <ul class="clinical-service-list">
+                            <li>Sports injury rehabilitation</li>
+                            <li>ACL injuries and reconstruction</li>
+                            <li>Return-to-sport rehabilitation</li>
+                            <li>Strength and mobility limitations</li>
+                            <li>Functional rehabilitation</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="service-card">
-                    <div class="s-icon"><i class="fa-solid fa-bed-pulse"></i></div>
-                    <h3>Post-Surgical Protocols</h3>
-                    <p>Structured clinical recovery programs following joint replacement, ligament repair, or spinal surgery.</p>
-                </div>
+                <article class="clinical-service-card">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/hero-orthopedic-rehab.png" alt="Hands-on rehabilitation support following an orthopedic procedure" width="1600" height="900" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Post-Surgical Rehabilitation</h3>
+                        <p>Structured clinical recovery programs support a safe return to movement after joint replacement, ligament repair, spinal surgery, and other procedures.</p>
+                        <ul class="clinical-service-list">
+                            <li>Post-operative rehabilitation</li>
+                            <li>Post-surgical protocols</li>
+                            <li>Progressive strengthening</li>
+                            <li>Mobility restoration</li>
+                            <li>Return to daily activity</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="service-card">
-                    <div class="s-icon"><i class="fa-solid fa-child-reaching"></i></div>
-                    <h3>Gait & Balance Training</h3>
-                    <p>Biomechanical assessment and corrective exercise targeting posture, stability, and fall prevention.</p>
-                </div>
+                <article class="clinical-service-card">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/hero-exercise-rehab.png" alt="Therapeutic exercise supporting mobility and balance" width="1600" height="900" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Neurological, Gait &amp; Balance Rehabilitation</h3>
+                        <p>Individualized rehabilitation helps improve stability, mobility, and confidence for people recovering from neurological conditions or managing balance-related movement concerns.</p>
+                        <ul class="clinical-service-list">
+                            <li>Neurological rehabilitation</li>
+                            <li>Stroke recovery</li>
+                            <li>Neurological impairments</li>
+                            <li>Gait and balance training</li>
+                            <li>Balance and mobility concerns</li>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="service-card">
-                    <div class="s-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3>Chronic Pain Management</h3>
-                    <p>Multimodal physical therapy strategies to reduce pain frequency and restore overall movement efficiency.</p>
-                </div>
+                <article class="clinical-service-card">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/hero-dry-needling.png" alt="Focused dry needling treatment for muscle tension" width="1600" height="900" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Dry Needling &amp; Persistent Pain</h3>
+                        <p>When clinically appropriate, dry needling can be part of a multimodal treatment plan to address muscle tension, support comfortable movement, and help manage persistent pain.</p>
+                        <ul class="clinical-service-list">
+                            <li>Dry needling</li>
+                            <li>Muscle tightness and trigger points</li>
+                            <li>Chronic pain management</li>
+                            <li>Joint and muscle pain</li>
+                            <li>Movement efficiency and mobility</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="clinical-service-card clinical-service-card--tmj">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/service-tmj-jaw-treatment.jpg" alt="Hands-on facial treatment supporting jaw comfort" width="1200" height="1800" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>TMJ &amp; Jaw Rehabilitation</h3>
+                        <p>Focused rehabilitation can address jaw discomfort, muscle tension, movement restrictions, and functional goals through individualized assessment, education, and treatment.</p>
+                        <ul class="clinical-service-list">
+                            <li>TMJ and jaw dysfunction rehabilitation</li>
+                            <li>TMJ and jaw pain</li>
+                            <li>Jaw mobility and movement control</li>
+                            <li>Posture and self-management education</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="clinical-service-card clinical-service-card--burn">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/service-burn-rehabilitation.jpg" alt="Physical therapist providing hand rehabilitation" width="1200" height="1800" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Burn Rehabilitation</h3>
+                        <p>Individualized rehabilitation can support mobility, strength, scar-tissue movement, and day-to-day function throughout burn recovery.</p>
+                        <ul class="clinical-service-list">
+                            <li>Burn rehabilitation</li>
+                            <li>Mobility and range-of-motion support</li>
+                            <li>Strength and functional recovery</li>
+                            <li>Personalized activity goals</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="clinical-service-card clinical-service-card--specialized">
+                    <div class="clinical-service-media">
+                        <img src="assets/images/service-specialized-rehabilitation.jpg" alt="Physical therapy session supporting functional rehabilitation" width="1200" height="1800" loading="lazy" decoding="async">
+                    </div>
+                    <div class="clinical-service-content">
+                        <h3>Specialized Rehabilitation</h3>
+                        <p>Personalized rehabilitation programs help address complex movement needs and support stronger, more confident participation in the activities that matter most.</p>
+                        <ul class="clinical-service-list">
+                            <li>Strength, mobility, and functional rehabilitation</li>
+                            <li>Individualized home exercise programs</li>
+                            <li>Movement training and patient education</li>
+                            <li>Return to daily activities</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -2542,9 +2654,53 @@
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
+            // Main navigation and More dropdown
             const mobileToggle = document.getElementById('mobileToggle');
             const navLinks = document.getElementById('navLinks');
+            const moreToggle = document.getElementById('moreToggle');
+            const navDropdown = moreToggle?.closest('.nav-dropdown');
+            const moreMenu = document.getElementById('moreMenu');
+
+            const closeMoreMenu = () => {
+                navDropdown?.classList.remove('is-open');
+                moreToggle?.setAttribute('aria-expanded', 'false');
+            };
+
+            const closeMobileMenu = () => {
+                if (!mobileToggle || !navLinks) {
+                    return;
+                }
+
+                navLinks.classList.remove('active');
+                mobileToggle.querySelector('i').classList.remove('fa-xmark');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                closeMoreMenu();
+            };
+
+            if (moreToggle && navDropdown && moreMenu) {
+                moreToggle.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    const isOpen = navDropdown.classList.toggle('is-open');
+                    moreToggle.setAttribute('aria-expanded', String(isOpen));
+                });
+
+                moreMenu.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', closeMoreMenu);
+                });
+
+                document.addEventListener('click', (event) => {
+                    if (!navDropdown.contains(event.target)) {
+                        closeMoreMenu();
+                    }
+                });
+
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') {
+                        closeMoreMenu();
+                    }
+                });
+            }
 
             if (mobileToggle && navLinks) {
                 mobileToggle.addEventListener('click', () => {
@@ -2558,16 +2714,12 @@
                         icon.classList.remove('fa-xmark');
                         icon.classList.add('fa-bars');
                         mobileToggle.setAttribute('aria-expanded', 'false');
+                        closeMoreMenu();
                     }
                 });
 
                 navLinks.querySelectorAll('a').forEach((link) => {
-                    link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
-                        mobileToggle.querySelector('i').classList.remove('fa-xmark');
-                        mobileToggle.querySelector('i').classList.add('fa-bars');
-                        mobileToggle.setAttribute('aria-expanded', 'false');
-                    });
+                    link.addEventListener('click', closeMobileMenu);
                 });
             }
 
