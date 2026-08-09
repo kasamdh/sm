@@ -957,8 +957,7 @@
             font-size: 0.94rem;
         }
 
-        .about-approach-grid,
-        .about-beyond-grid {
+        .about-approach-grid {
             display: grid;
             grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
             align-items: center;
@@ -1068,35 +1067,6 @@
 
         .about-approach-grid .about-story-card {
             background: var(--white);
-        }
-
-        .about-beyond-grid {
-            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
-        }
-
-        .about-beyond-mark {
-            min-height: 280px;
-            display: grid;
-            place-items: center;
-            padding: 36px;
-            border-radius: var(--radius-md);
-            background: linear-gradient(145deg, var(--dark-black), var(--soft-black));
-            color: var(--white);
-            text-align: center;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .about-beyond-mark i {
-            margin-bottom: 16px;
-            color: #ff8798;
-            font-size: 2.35rem;
-        }
-
-        .about-beyond-mark p {
-            max-width: 260px;
-            color: #f5f5f5;
-            font-size: 1.05rem;
-            font-weight: 650;
         }
 
         .about-cta-section {
@@ -1665,7 +1635,7 @@
         }
 
         @media (max-width: 992px) {
-            .contact-grid, .about-showcase-grid, .about-approach-grid, .about-beyond-grid, .why-choose-grid, .virtual-rehab-grid {
+            .contact-grid, .about-showcase-grid, .about-approach-grid, .why-choose-grid, .virtual-rehab-grid {
                 grid-template-columns: 1fr;
             }
             .about-profile-card {
@@ -1779,9 +1749,6 @@
             }
             .about-slider-controls {
                 gap: 10px;
-            }
-            .about-beyond-mark {
-                min-height: 230px;
             }
             .brand-logo-img {
                 height: 68px;
@@ -2153,23 +2120,6 @@
                 <p class="about-story-label">Meaningful, lasting progress</p>
                 <p>Care is designed to build confidence, strength, mobility, and a clear path forward.</p>
             </aside>
-        </div>
-    </section>
-
-    <section class="section" aria-labelledby="beyond-title">
-        <div class="container about-beyond-grid">
-            <aside class="about-beyond-mark" aria-hidden="true">
-                <div>
-                    <i class="fa-solid fa-earth-americas"></i>
-                    <p>Curiosity, culture, and connection help shape compassionate care.</p>
-                </div>
-            </aside>
-            <div class="about-prose">
-                <p class="about-copy-kicker">Beyond the Clinic</p>
-                <h2 id="beyond-title">A Global Perspective, A Personal Approach</h2>
-                <p>Outside of physical therapy, Dr. Monika Pokhrel, PT, DPT enjoys traveling, discovering new places, experiencing different cultures, and exploring different foods.</p>
-                <p>Her international background has shaped the way she connects with patients and approaches care with compassion, respect, and an appreciation for each person's unique story.</p>
-            </div>
         </div>
     </section>
 
