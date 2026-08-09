@@ -11,12 +11,12 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
     <meta property="og:description" content="Personalized physical therapy, injury rehabilitation, and virtual rehab coaching serving Fuquay-Varina, Raleigh, Apex, Cary, Holly Springs, and Morrisville, NC.">
-    <meta property="og:image" content="smlogo.png">
+    <meta property="og:image" content="assets/smlogo.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
     <meta name="twitter:description" content="Personalized physical therapy, injury rehabilitation, and virtual rehab coaching serving Fuquay-Varina, Raleigh, Apex, Cary, Holly Springs, and Morrisville, NC.">
-    <link rel="icon" type="image/png" href="smlogo.png">
-    <link rel="apple-touch-icon" href="smlogo.png">
+    <link rel="icon" type="image/png" href="assets/smlogo.png">
+    <link rel="apple-touch-icon" href="assets/smlogo.png">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -322,6 +322,233 @@
 
         .btn-block {
             width: 100%;
+        }
+
+        /* --- Static Brand Name Above the Home Carousel --- */
+        .home-brand-bar {
+            width: 100%;
+            padding: 18px 0 16px;
+            background-color: var(--white);
+            border-bottom: 4px solid var(--primary-red);
+        }
+
+        .home-brand-name {
+            margin: 0;
+            color: var(--dark-black);
+            font-size: clamp(1.8rem, 3.4vw, 3.1rem);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -1.6px;
+        }
+
+        .home-brand-name span {
+            color: var(--primary-red);
+        }
+
+        /* --- Full-Width Home Carousel --- */
+        .home-carousel {
+            position: relative;
+            width: 100%;
+            min-height: 680px;
+            overflow: hidden;
+            background-color: var(--dark-black);
+            color: var(--white);
+            scroll-margin-top: 120px;
+        }
+
+        .carousel-viewport {
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.7s ease-in-out;
+            will-change: transform;
+        }
+
+        .carousel-slide {
+            position: relative;
+            isolation: isolate;
+            flex: 0 0 100%;
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-background {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .carousel-background::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(17, 17, 17, 0.76) 0%, rgba(17, 17, 17, 0.5) 44%, rgba(17, 17, 17, 0.12) 100%);
+        }
+
+        .carousel-background-pelvic {
+            background-color: #38111C;
+            background-image: url('assets/images/hero-pelvic-floor.png');
+            background-position: center 42%;
+        }
+
+        .carousel-background-ortho {
+            background-color: #17202B;
+            background-image: url('assets/images/hero-orthopedic-rehab.png');
+            background-position: center;
+        }
+
+        .carousel-background-dry-needling {
+            background-color: #183028;
+            background-image: url('assets/images/hero-dry-needling.png');
+            background-position: center;
+        }
+
+        .carousel-background-exercise {
+            background-color: #25183B;
+            background-image: url('assets/images/hero-exercise-rehab.png');
+            background-position: center;
+        }
+
+        .carousel-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            padding: 95px 0 145px;
+        }
+
+        .carousel-copy {
+            max-width: 720px;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.58);
+        }
+
+        .carousel-copy .btn {
+            text-shadow: none;
+        }
+
+        .carousel-eyebrow {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .carousel-eyebrow::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            margin-top: 8px;
+            background-color: var(--primary-red);
+        }
+
+        .carousel-title {
+            max-width: 750px;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: clamp(2.75rem, 5.6vw, 5.8rem);
+            font-weight: 800;
+            line-height: 0.98;
+            letter-spacing: -2px;
+        }
+
+        .carousel-title span {
+            color: var(--primary-red-hover);
+        }
+
+        .carousel-description {
+            max-width: 620px;
+            margin-bottom: 30px;
+            color: #E2E8F0;
+            font-size: clamp(1rem, 1.6vw, 1.2rem);
+        }
+
+        .carousel-controls {
+            position: absolute;
+            z-index: 2;
+            right: 5%;
+            bottom: 30px;
+            left: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .carousel-control-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .carousel-button, .carousel-dot {
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            color: var(--white);
+            background-color: rgba(17, 17, 17, 0.55);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-button {
+            width: 46px;
+            height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1rem;
+        }
+
+        .carousel-button:hover, .carousel-button:focus-visible, .carousel-dot:hover, .carousel-dot:focus-visible {
+            border-color: var(--primary-red);
+            background-color: var(--primary-red);
+            outline: none;
+        }
+
+        .carousel-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .carousel-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .carousel-dot {
+            width: 11px;
+            height: 11px;
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        .carousel-dot.is-active {
+            width: 34px;
+            border-radius: 10px;
+            border-color: var(--primary-red);
+            background-color: var(--primary-red);
+        }
+
+        .carousel-status {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
 
         /* --- Hero Section --- */
@@ -1071,6 +1298,15 @@
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
+        .footer-bottom a {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--primary-red-hover);
+        }
+
         /* --- Responsive Media Queries --- */
         @media (max-width: 1300px) {
             .mobile-toggle {
@@ -1108,20 +1344,11 @@
         }
 
         @media (max-width: 1100px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 35px;
+            .home-carousel, .carousel-slide {
+                min-height: 640px;
             }
-            .hero-text {
-                text-align: center;
-            }
-            .hero-buttons, .hero-stats {
-                justify-content: center;
-            }
-            .hero-card {
-                width: 100%;
-                max-width: 560px;
-                margin: 0 auto;
+            .carousel-content {
+                padding-top: 85px;
             }
         }
 
@@ -1131,9 +1358,6 @@
             }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
-            }
-            .about-grid {
-                grid-template-columns: 1fr !important;
             }
             .blog-grid, .pricing-grid {
                 grid-template-columns: 1fr;
@@ -1175,32 +1399,41 @@
             .social-links .patient-portal-link {
                 height: 36px;
             }
-            .hero-section {
-                padding: 60px 0 45px;
-            }
-            .hero-text h1 {
-                font-size: clamp(2.1rem, 9vw, 2.7rem);
-            }
             .section-title {
                 margin-bottom: 35px;
             }
             .section-title h2 {
                 font-size: clamp(1.7rem, 7vw, 2.1rem);
             }
+            .home-brand-bar {
+                padding: 14px 0 13px;
+            }
+            .home-brand-name {
+                font-size: clamp(1.65rem, 6.7vw, 2.4rem);
+                letter-spacing: -1.2px;
+            }
+            .home-carousel, .carousel-slide {
+                min-height: 620px;
+            }
+            .carousel-background::after {
+                background: linear-gradient(90deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.56) 100%);
+            }
+            .carousel-content {
+                padding: 70px 0 135px;
+            }
+            .carousel-copy {
+                max-width: 600px;
+            }
+            .carousel-title {
+                letter-spacing: -1px;
+            }
+            .carousel-controls {
+                right: 4%;
+                bottom: 22px;
+                left: 4%;
+            }
             .hero-profile-card, .contact-info-panel, .appointment-panel {
                 padding: 28px;
-            }
-            .hero-avatar {
-                width: 90px;
-                height: 90px;
-                font-size: 2.5rem;
-            }
-            .hero-stats {
-                gap: 16px;
-                flex-wrap: wrap;
-            }
-            .stat-item {
-                flex: 1 1 90px;
             }
             .form-row {
                 grid-template-columns: 1fr;
@@ -1250,22 +1483,44 @@
             .top-contact {
                 gap: 4px;
             }
-            .hero-buttons .btn {
-                width: 100%;
+            .home-brand-bar {
+                padding: 12px 0 11px;
             }
-            .hero-stats {
-                display: grid;
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 10px;
+            .home-brand-name {
+                font-size: 1.6rem;
+                letter-spacing: -1px;
             }
-            .stat-item {
-                min-width: 0;
+            .home-carousel, .carousel-slide {
+                min-height: 600px;
             }
-            .stat-item h3 {
-                font-size: 1.45rem;
+            .carousel-content {
+                padding-top: 58px;
             }
-            .stat-item p {
-                font-size: 0.7rem;
+            .carousel-eyebrow {
+                margin-bottom: 12px;
+                font-size: 0.72rem;
+            }
+            .carousel-title {
+                font-size: clamp(2.2rem, 10vw, 3.25rem);
+                line-height: 1;
+            }
+            .carousel-description {
+                margin-bottom: 22px;
+                font-size: 0.95rem;
+            }
+            .carousel-controls {
+                bottom: 16px;
+                gap: 8px;
+            }
+            .carousel-button {
+                width: 42px;
+                height: 42px;
+            }
+            .carousel-dots {
+                gap: 7px;
+            }
+            .carousel-dot.is-active {
+                width: 28px;
             }
             .services-grid, .resource-grid {
                 grid-template-columns: 1fr;
@@ -1311,12 +1566,11 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="#home">
-                <img src="smlogo.png" alt="Source Motion Physical Therapy Logo" class="brand-logo-img">
+                <img src="assets/smlogo.png" alt="Source Motion Physical Therapy Logo" class="brand-logo-img">
             </a>
             
             <nav class="nav-links" id="navLinks">
                 <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#blog">Blog</a>
                 <a href="#why-choose-us">Why Choose Us</a>
@@ -1335,79 +1589,89 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <div class="hero-badge">Source Motion Physical Therapy</div>
-                <h1>Precision Motion Recovery. <br><span class="highlight">Evidence-Based Physical Care.</span></h1>
-                <p>Personalized physical therapy and functional rehabilitation led by Dr. Monika Pokhrel, DPT in Raleigh, North Carolina. We target the root cause of movement limitation to help you reclaim peak quality of life.</p>
-                
-                <div class="hero-buttons">
-                    <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Request Appointment</a>
-                    <a href="tel:+19108904518" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call (910) 890-4518</a>
-                </div>
-
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>1-on-1 Patient Focus</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>Custom</h3>
-                        <p>Motion Plans</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>Raleigh</h3>
-                        <p>North Carolina</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="hero-profile-card">
-                    <div class="hero-avatar">
-                        <i class="fa-solid fa-user-doctor"></i>
-                    </div>
-                    <h3>Dr. Monika Pokhrel, DPT</h3>
-                    <p class="subtitle">Physical Therapist & Clinical Lead</p>
-                    <div class="tag-list">
-                        <span class="tag">Musculoskeletal Care</span>
-                        <span class="tag">Post-Op Rehab</span>
-                        <span class="tag">Motion Specialist</span>
-                    </div>
-                    <hr style="border: none; border-top: 1px solid var(--gray-border); margin: 15px 0;">
-                    <a href="#about" class="btn btn-dark btn-block"><i class="fa-solid fa-circle-info"></i> View Profile</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section alt-bg">
+    <!-- Static brand name: intentionally outside the moving slider -->
+    <div class="home-brand-bar">
         <div class="container">
-            <div class="section-title text-center">
-                <h2>About Lead Specialist</h2>
-                <div class="divider-red"></div>
-            </div>
+            <h1 class="home-brand-name">Source Motion <span>Physical Therapy</span></h1>
+        </div>
+    </div>
 
-            <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                <div>
-                    <img src="smlogo.png" alt="Source Motion Logo" style="max-width: 100%; height: auto; display: block; margin: 0 auto; background: var(--white); padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--gray-border);">
-                </div>
-                <div>
-                    <h3 style="font-size: 1.8rem; color: var(--dark-black); margin-bottom: 15px;">Dr. Monika Pokhrel, DPT</h3>
-                    <p style="font-weight: 600; color: var(--primary-red); margin-bottom: 15px;">Dedicated to individual patient restoration and biomechanical excellence.</p>
-                    <p style="color: var(--text-muted); margin-bottom: 20px;">At Source Motion Physical Therapy, Dr. Monika Pokhrel, DPT, delivers comprehensive physical therapy services tailored to each individual's functional needs. By merging manual therapy, therapeutic exercise, and modern biomechanical assessment, Dr. Pokhrel guides patients from acute pain to optimal mobility.</p>
-                    
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="fa-solid fa-circle-check" style="color: var(--primary-red);"></i> Personalized 1-on-1 Clinical Evaluations</li>
-                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="fa-solid fa-circle-check" style="color: var(--primary-red);"></i> Comprehensive Spine, Joint & Muscle Care</li>
-                        <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 600;"><i class="fa-solid fa-circle-check" style="color: var(--primary-red);"></i> Individualized Home Exercise & Education Plans</li>
-                    </ul>
-                </div>
+    <!-- Full-Width Home Image Slider -->
+    <section id="home" class="home-carousel" aria-label="Source Motion Physical Therapy featured services" aria-roledescription="carousel" tabindex="0">
+        <div class="carousel-viewport">
+            <div class="carousel-track" data-carousel-track>
+                <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="1 of 4: Pelvic Floor Physical Therapy">
+                    <div class="carousel-background carousel-background-pelvic"></div>
+                    <div class="carousel-content">
+                        <div class="container">
+                            <div class="carousel-copy">
+                                <p class="carousel-eyebrow">Personalized, 1-on-1 Care</p>
+                                <h2 class="carousel-title">Pelvic Floor <span>Physical Therapy</span></h2>
+                                <p class="carousel-description">Private, respectful care designed to support pelvic-floor strength, comfort, control, and confident movement.</p>
+                                <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book Evaluation</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="2 of 4: Orthopedic Care" aria-hidden="true">
+                    <div class="carousel-background carousel-background-ortho"></div>
+                    <div class="carousel-content">
+                        <div class="container">
+                            <div class="carousel-copy">
+                                <p class="carousel-eyebrow">Move with Confidence</p>
+                                <h2 class="carousel-title">Orthopedic <span>Care</span></h2>
+                                <p class="carousel-description">Individualized support for mobility, balance, joint pain, strength, and safer everyday movement—at your pace.</p>
+                                <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book Evaluation</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="3 of 4: Dry Needling" aria-hidden="true">
+                    <div class="carousel-background carousel-background-dry-needling"></div>
+                    <div class="carousel-content">
+                        <div class="container">
+                            <div class="carousel-copy">
+                                <p class="carousel-eyebrow">Focused Treatment, When Appropriate</p>
+                                <h2 class="carousel-title">Dry <span>Needling</span></h2>
+                                <p class="carousel-description">A targeted treatment option that may help address stubborn muscle tension and support more comfortable movement when clinically appropriate.</p>
+                                <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book Evaluation</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="4 of 4: Exercise and Rehabilitation" aria-hidden="true">
+                    <div class="carousel-background carousel-background-exercise"></div>
+                    <div class="carousel-content">
+                        <div class="container">
+                            <div class="carousel-copy">
+                                <p class="carousel-eyebrow">Build Strength for Life</p>
+                                <h2 class="carousel-title">Exercise &amp; <span>Rehabilitation</span></h2>
+                                <p class="carousel-description">Build strength, mobility, and confidence for sports, work, and everyday life with a plan shaped around your goals.</p>
+                                <a href="#appointment" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book Evaluation</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
+
+        <div class="carousel-controls" aria-label="Image slider controls">
+            <div class="carousel-control-group">
+                <button type="button" class="carousel-button" data-carousel-prev aria-label="Show previous slide"><i class="fa-solid fa-arrow-left"></i></button>
+                <button type="button" class="carousel-button" data-carousel-pause aria-pressed="false" aria-label="Pause automatic slides"><i class="fa-solid fa-pause"></i></button>
+            </div>
+            <div class="carousel-dots" aria-label="Select a slide">
+                <button type="button" class="carousel-dot is-active" data-carousel-dot="0" aria-label="Show slide 1" aria-current="true"></button>
+                <button type="button" class="carousel-dot" data-carousel-dot="1" aria-label="Show slide 2"></button>
+                <button type="button" class="carousel-dot" data-carousel-dot="2" aria-label="Show slide 3"></button>
+                <button type="button" class="carousel-dot" data-carousel-dot="3" aria-label="Show slide 4"></button>
+            </div>
+            <button type="button" class="carousel-button" data-carousel-next aria-label="Show next slide"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <p class="carousel-status" data-carousel-status aria-live="polite">Slide 1 of 4: Pelvic Floor Physical Therapy</p>
     </section>
 
     <!-- Doctor / Specialist Directory (Nepal Mediciti Style Feature) -->
@@ -1863,7 +2127,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div>
-                <img src="smlogo.png" alt="Source Motion Logo" class="footer-logo">
+                <img src="assets/smlogo.png" alt="Source Motion Logo" class="footer-logo">
                 <p style="font-size: 0.9rem; margin-top: 10px;">Source Motion Physical Therapy provides evidence-based physical therapy care led by Dr. Monika Pokhrel, DPT in Raleigh, North Carolina.</p>
             </div>
 
@@ -1871,7 +2135,6 @@
                 <h4>Quick Navigation</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Dr. Monika Pokhrel</a></li>
                     <li><a href="#specialists">Specialist Directory</a></li>
                     <li><a href="#services">Clinical Services</a></li>
                 </ul>
@@ -1899,7 +2162,7 @@
 
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; <span id="year"></span> Source Motion Physical Therapy. All Rights Reserved. Lead Physical Therapist: Dr. Monika Pokhrel, DPT.</p>
+                <p>&copy; <span id="year"></span> Source Motion Physical Therapy. All Rights Reserved. Lead Physical Therapist: Dr. Monika Pokhrel, DPT. <a href="assets/image-credits.html">Photo credits</a></p>
             </div>
         </div>
     </footer>
@@ -1942,6 +2205,180 @@
                 });
             }
 
+            // Full-width home carousel
+            const carousel = document.querySelector('.home-carousel');
+
+            if (carousel) {
+                const carouselViewport = carousel.querySelector('.carousel-viewport');
+                const carouselTrack = carousel.querySelector('[data-carousel-track]');
+                const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
+                const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+                const previousButton = carousel.querySelector('[data-carousel-prev]');
+                const nextButton = carousel.querySelector('[data-carousel-next]');
+                const pauseButton = carousel.querySelector('[data-carousel-pause]');
+                const status = carousel.querySelector('[data-carousel-status]');
+                const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+                let currentSlide = 0;
+                let autoSlideTimer;
+                let isUserPaused = false;
+                let touchStartX = 0;
+
+                const stopAutoSlide = () => {
+                    window.clearInterval(autoSlideTimer);
+                };
+
+                const startAutoSlide = () => {
+                    if (isUserPaused || reducedMotion.matches) {
+                        return;
+                    }
+
+                    stopAutoSlide();
+                    autoSlideTimer = window.setInterval(() => {
+                        showSlide(currentSlide + 1);
+                    }, 7000);
+                };
+
+                const updatePauseButton = () => {
+                    if (!pauseButton) {
+                        return;
+                    }
+
+                    pauseButton.disabled = reducedMotion.matches;
+                    pauseButton.setAttribute('aria-pressed', String(isUserPaused));
+                    pauseButton.setAttribute('aria-label', reducedMotion.matches
+                        ? 'Automatic slides are disabled because reduced motion is enabled'
+                        : (isUserPaused ? 'Resume automatic slides' : 'Pause automatic slides'));
+                    pauseButton.innerHTML = isUserPaused
+                        ? '<i class="fa-solid fa-play"></i>'
+                        : '<i class="fa-solid fa-pause"></i>';
+                };
+
+                const showSlide = (requestedIndex) => {
+                    currentSlide = (requestedIndex + slides.length) % slides.length;
+                    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                    slides.forEach((slide, index) => {
+                        const isActive = index === currentSlide;
+                        slide.setAttribute('aria-hidden', String(!isActive));
+
+                        if ('inert' in slide) {
+                            slide.inert = !isActive;
+                        }
+
+                        slide.querySelectorAll('a').forEach((link) => {
+                            if (isActive) {
+                                link.removeAttribute('tabindex');
+                            } else {
+                                link.setAttribute('tabindex', '-1');
+                            }
+                        });
+                    });
+
+                    dots.forEach((dot, index) => {
+                        const isActive = index === currentSlide;
+                        dot.classList.toggle('is-active', isActive);
+                        if (isActive) {
+                            dot.setAttribute('aria-current', 'true');
+                        } else {
+                            dot.removeAttribute('aria-current');
+                        }
+                    });
+
+                    if (status) {
+                        status.textContent = `Showing slide ${slides[currentSlide].getAttribute('aria-label')}`;
+                    }
+                };
+
+                previousButton?.addEventListener('click', () => {
+                    showSlide(currentSlide - 1);
+                    startAutoSlide();
+                });
+
+                nextButton?.addEventListener('click', () => {
+                    showSlide(currentSlide + 1);
+                    startAutoSlide();
+                });
+
+                dots.forEach((dot) => {
+                    dot.addEventListener('click', () => {
+                        showSlide(Number(dot.dataset.carouselDot));
+                        startAutoSlide();
+                    });
+                });
+
+                pauseButton?.addEventListener('click', () => {
+                    isUserPaused = !isUserPaused;
+                    updatePauseButton();
+                    if (isUserPaused) {
+                        stopAutoSlide();
+                    } else {
+                        startAutoSlide();
+                    }
+                });
+
+                carousel.addEventListener('mouseenter', stopAutoSlide);
+                carousel.addEventListener('mouseleave', startAutoSlide);
+                carousel.addEventListener('focusin', stopAutoSlide);
+                carousel.addEventListener('focusout', (event) => {
+                    if (!carousel.contains(event.relatedTarget)) {
+                        startAutoSlide();
+                    }
+                });
+
+                carousel.addEventListener('keydown', (event) => {
+                    if (event.key === 'ArrowLeft') {
+                        event.preventDefault();
+                        showSlide(currentSlide - 1);
+                        startAutoSlide();
+                    }
+                    if (event.key === 'ArrowRight') {
+                        event.preventDefault();
+                        showSlide(currentSlide + 1);
+                        startAutoSlide();
+                    }
+                });
+
+                carouselViewport?.addEventListener('touchstart', (event) => {
+                    touchStartX = event.changedTouches[0].clientX;
+                }, { passive: true });
+
+                carouselViewport?.addEventListener('touchend', (event) => {
+                    const swipeDistance = event.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(swipeDistance) < 40) {
+                        return;
+                    }
+                    showSlide(swipeDistance > 0 ? currentSlide - 1 : currentSlide + 1);
+                    startAutoSlide();
+                }, { passive: true });
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        stopAutoSlide();
+                    } else {
+                        startAutoSlide();
+                    }
+                });
+
+                const handleMotionPreference = () => {
+                    if (reducedMotion.matches) {
+                        stopAutoSlide();
+                    } else if (!isUserPaused) {
+                        startAutoSlide();
+                    }
+                    updatePauseButton();
+                };
+
+                if (reducedMotion.addEventListener) {
+                    reducedMotion.addEventListener('change', handleMotionPreference);
+                } else {
+                    reducedMotion.addListener(handleMotionPreference);
+                }
+
+                showSlide(0);
+                updatePauseButton();
+                startAutoSlide();
+            }
+
             // Appointment Form submission handler
             const bookingForm = document.getElementById('bookingForm');
             const formResponse = document.getElementById('formResponse');
@@ -1971,7 +2408,7 @@
         function filterDoctors() {
             const searchVal = document.getElementById('doctorSearch').value.toLowerCase();
             alert(`Filter applied for keyword: "${searchVal}". Lead Practitioner: Dr. Monika Pokhrel, DPT.`);
-C        }
+        }
     </script>
 </body>
 </html>
