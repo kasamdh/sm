@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC</title>
-    <meta name="description" content="Personalized physical therapy, injury rehabilitation, and virtual rehab coaching serving Fuquay-Varina, Raleigh, Apex, Cary, Holly Springs, and Morrisville, NC.">
-    <meta name="keywords" content="physical therapy Raleigh NC, physical therapy Fuquay-Varina NC, physical therapy Apex NC, physical therapy Cary NC, physical therapy Holly Springs NC, physical therapy Morrisville NC, orthopedic rehabilitation, sports injury rehab, virtual rehab coaching">
+    <meta name="description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
+    <meta name="keywords" content="physical therapy Raleigh NC, physical therapy Fuquay-Varina NC, physical therapy Holly Springs NC, physical therapy Angier NC, physical therapy Willow Spring NC, physical therapy Apex NC, physical therapy Garner NC, physical therapy Clayton NC, physical therapy Duncan NC, physical therapy Lillington NC, physical therapy Morrisville NC, home-based physical therapy, cash-based physical therapy, orthopedic rehabilitation, sports injury rehab">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#D90429">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
-    <meta property="og:description" content="Personalized physical therapy, injury rehabilitation, and virtual rehab coaching serving Fuquay-Varina, Raleigh, Apex, Cary, Holly Springs, and Morrisville, NC.">
+    <meta property="og:description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
     <meta property="og:image" content="assets/smlogo.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
-    <meta name="twitter:description" content="Personalized physical therapy, injury rehabilitation, and virtual rehab coaching serving Fuquay-Varina, Raleigh, Apex, Cary, Holly Springs, and Morrisville, NC.">
+    <meta name="twitter:description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
     <link rel="icon" type="image/png" href="assets/smlogo.png">
     <link rel="apple-touch-icon" href="assets/smlogo.png">
     
@@ -1508,6 +1508,17 @@
             font-size: 0.9rem;
         }
 
+        .footer-service-area {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .footer-service-area i {
+            flex: 0 0 auto;
+            margin-top: 0.18rem;
+        }
+
         .footer-col a:hover {
             color: var(--primary-red);
         }
@@ -2351,7 +2362,7 @@
         <div class="container text-center">
             <div class="section-title">
                 <h2 id="location-title">Service Area</h2>
-                <p id="service-area-list" style="color: var(--text-muted);">Serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, and Morrisville.</p>
+                <p id="service-area-list" style="color: var(--text-muted);">Serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville.</p>
                 <div class="divider-red"></div>
             </div>
         </div>
@@ -2386,8 +2397,7 @@
                 <ul>
                     <li><i class="fa-solid fa-phone" style="color: var(--primary-red);"></i> <a href="tel:+19108904518">(910) 890-4518</a></li>
                     <li><i class="fa-solid fa-envelope" style="color: var(--primary-red);"></i> <a href="https://outlook.office.com/mail/deeplink/compose?to=info%40sourcemotionpt.com" target="_blank" rel="noopener noreferrer">info@sourcemotionpt.com</a></li>
-                    <li><i class="fa-solid fa-location-dot" style="color: var(--primary-red);"></i> Raleigh, NC, USA</li>
-                    <li><i class="fa-solid fa-route" style="color: var(--primary-red);"></i> Fuquay-Varina, Raleigh, Apex, Cary, Holly Springs &amp; Morrisville</li>
+                    <li class="footer-service-area"><i class="fa-solid fa-route" style="color: var(--primary-red);" aria-hidden="true"></i><span>Serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville.</span></li>
                 </ul>
             </div>
         </div>
@@ -2488,6 +2498,7 @@
                     { name: 'Raleigh', coordinates: [35.775000, -78.640000] },
                     { name: 'Clayton', coordinates: [35.650711, -78.456391] },
                     { name: 'Duncan, NC', coordinates: [35.562656, -78.871959] },
+                    { name: 'Lillington', coordinates: [35.400028, -78.813728] },
                     { name: 'Morrisville', coordinates: [35.823500, -78.825600] }
                 ];
                 const serviceAreaMap = window.L.map(serviceAreaMapElement, {
