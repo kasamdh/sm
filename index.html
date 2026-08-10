@@ -29,13 +29,14 @@
         /* --- Red, Black, White Brand Theme --- */
         :root {
             --primary-red: #D90429;
-            --primary-red-hover: #EF233C;
+            --primary-red-hover: #C40327;
             --dark-black: #111111;
             --soft-black: #1E1E1E;
             --gray-light: #F8F9FA;
             --gray-border: #E5E5E5;
             --text-dark: #2B2D42;
             --text-muted: #6C757D;
+            --text-muted-surface: #59636F;
             --white: #FFFFFF;
             --shadow-sm: 0 2px 5px rgba(0,0,0,0.05);
             --shadow-md: 0 4px 15px rgba(0,0,0,0.1);
@@ -87,6 +88,67 @@
 
         .alt-bg {
             background-color: var(--gray-light);
+        }
+
+        /* --- Section Contrast System --- */
+        .about-showcase-section {
+            background: linear-gradient(180deg, var(--white) 0%, #fff5f6 100%);
+        }
+
+        .about-cta-section {
+            background-color: #fff0f2;
+        }
+
+        #services {
+            background-color: #f1f5f9;
+            border-block: 1px solid #e2e8f0;
+        }
+
+        #why-choose-us {
+            background-color: #0f172a;
+            color: var(--white);
+        }
+
+        #why-choose-us .section-title h2 {
+            color: var(--white);
+        }
+
+        #why-choose-us .section-title > p {
+            color: #d1d5db !important;
+        }
+
+        #services .section-title > p,
+        #recovery-shop .section-title > p,
+        #recovery-shop .shop-note,
+        #faq .section-title > p,
+        #contact .section-title > p {
+            color: var(--text-muted-surface) !important;
+        }
+
+        #recovery-shop {
+            background-color: #fff0f2;
+            border-block: 1px solid #f5c2cb;
+        }
+
+        #faq {
+            background-color: #f1f5f9;
+        }
+
+        #contact {
+            background-color: #fff7f8;
+        }
+
+        #location {
+            background-color: var(--dark-black);
+            color: var(--white);
+        }
+
+        #location .section-title h2 {
+            color: var(--white);
+        }
+
+        #location .section-title p {
+            color: #d1d5db !important;
         }
 
         .text-center {
