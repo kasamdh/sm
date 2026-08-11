@@ -932,7 +932,7 @@
 
         .about-showcase-grid {
             display: grid;
-            grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+            grid-template-columns: minmax(220px, 1fr) minmax(0, 3fr);
             align-items: center;
             gap: clamp(34px, 6vw, 82px);
         }
@@ -942,7 +942,8 @@
         }
 
         .about-profile-card {
-            max-width: 430px;
+            width: min(100%, 280px);
+            max-width: 280px;
             margin: 0 auto;
             text-align: center;
         }
@@ -950,9 +951,11 @@
         .about-profile-image {
             display: block;
             width: 100%;
+            height: auto;
             aspect-ratio: 1;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center;
+            background: var(--white);
             border: 8px solid var(--white);
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-lg);
@@ -967,7 +970,9 @@
         }
 
         .about-slider-copy {
-            max-width: 720px;
+            width: 100%;
+            min-width: 0;
+            max-width: none;
         }
 
         .about-copy-kicker {
@@ -1767,7 +1772,8 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
             .about-profile-card {
-                max-width: 390px;
+                width: min(76vw, 250px);
+                max-width: 250px;
             }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1869,6 +1875,10 @@
         }
 
         @media (max-width: 600px) {
+            .about-profile-card {
+                width: min(70vw, 220px);
+                max-width: 220px;
+            }
             .about-story-card {
                 padding: 26px 22px;
             }
