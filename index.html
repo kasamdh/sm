@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Physical Therapy in Fuquay-Varina, NC | Source Motion PT</title>
     <meta name="description" content="One-on-one physical therapy in Fuquay-Varina, NC. Dry needling, orthopedic, pelvic floor, neurological and post-surgical rehabilitation.">
     <link rel="canonical" href="https://www.sourcemotionpt.com/">
@@ -117,6 +117,19 @@
 
         img {
             max-width: 100%;
+            height: auto;
+        }
+
+        .nav-container > *,
+        .about-showcase-grid > *,
+        .about-approach-grid > * {
+            min-width: 0;
+        }
+
+        .top-contact a,
+        .footer-col a,
+        .appointment-callout-email a {
+            overflow-wrap: anywhere;
         }
 
         .container {
@@ -536,6 +549,7 @@
 
         .carousel-viewport {
             overflow: hidden;
+            touch-action: pan-y;
         }
 
         .carousel-track {
@@ -1711,8 +1725,10 @@
                 left: 0;
                 width: 100%;
                 max-height: calc(100vh - 100px);
+                max-height: calc(100dvh - 100px);
                 overflow-y: auto;
                 -webkit-overflow-scrolling: touch;
+                overscroll-behavior: contain;
                 background-color: var(--white);
                 flex-direction: column;
                 gap: 0;
@@ -1748,7 +1764,7 @@
                 display: grid;
             }
             .nav-more-menu a {
-                min-height: 40px;
+                min-height: 44px;
                 padding: 9px 0;
             }
             .nav-links.active {
@@ -1812,12 +1828,12 @@
                 gap: 8px 14px;
             }
             .top-contact a {
-                min-height: 36px;
+                min-height: 44px;
                 font-size: 0.8rem;
             }
             .social-links a {
-                width: 36px;
-                height: 36px;
+                width: 44px;
+                height: 44px;
             }
             .section-title {
                 margin-bottom: 35px;
@@ -1833,23 +1849,42 @@
                 letter-spacing: -1.2px;
             }
             .home-carousel, .carousel-slide {
-                min-height: 620px;
+                min-height: clamp(34rem, 72svh, 39rem);
             }
             .carousel-background::after {
-                background: linear-gradient(90deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.56) 100%);
+                background: linear-gradient(90deg, rgba(17, 17, 17, 0.74) 0%, rgba(17, 17, 17, 0.46) 52%, rgba(17, 17, 17, 0.1) 100%);
+            }
+            .carousel-background-pelvic {
+                background-position: 78% center;
+            }
+            .carousel-background-ortho {
+                background-position: 72% center;
+            }
+            .carousel-background-dry-needling {
+                background-position: 72% center;
+            }
+            .carousel-background-exercise {
+                background-position: 78% center;
+            }
+            .carousel-background-cardiopulmonary {
+                background-position: 79% center;
+            }
+            .carousel-background-stroke {
+                background-position: 75% center;
             }
             .carousel-content {
-                padding: 70px 0 135px;
+                padding: clamp(3rem, 8svh, 4.5rem) 0 calc(6.25rem + env(safe-area-inset-bottom));
             }
             .carousel-copy {
                 max-width: 600px;
             }
             .carousel-title {
                 letter-spacing: -1px;
+                text-wrap: balance;
             }
             .carousel-controls {
                 right: 4%;
-                bottom: 22px;
+                bottom: calc(18px + env(safe-area-inset-bottom));
                 left: 4%;
             }
             .hero-profile-card, .appointment-panel {
@@ -1872,6 +1907,12 @@
             }
             #serviceAreaMap {
                 height: 360px;
+            }
+            .leaflet-control-zoom a {
+                width: 44px !important;
+                height: 44px !important;
+                line-height: 44px !important;
+                font-size: 1.2rem !important;
             }
         }
 
@@ -1973,6 +2014,285 @@
             }
             #serviceAreaMap {
                 height: 300px;
+            }
+        }
+
+        /* --- Phone and Tablet Experience Refinements --- */
+        @media (max-width: 768px) {
+            .carousel-button {
+                width: 44px;
+                height: 44px;
+            }
+
+            .carousel-dots {
+                gap: 2px;
+            }
+
+            .carousel-dot {
+                position: relative;
+                width: 22px;
+                height: 44px;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+            }
+
+            .carousel-dot::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.65);
+                border-radius: 50%;
+                background: rgba(17, 17, 17, 0.55);
+                content: '';
+                transform: translate(-50%, -50%);
+            }
+
+            .carousel-dot.is-active {
+                width: 32px;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+            }
+
+            .carousel-dot.is-active::before {
+                width: 26px;
+                border-color: var(--primary-red);
+                border-radius: 999px;
+                background: var(--primary-red);
+            }
+
+            .carousel-dot:hover,
+            .carousel-dot:focus-visible {
+                border-color: transparent;
+                background: transparent;
+            }
+
+            .carousel-dot:focus-visible::before {
+                outline: 2px solid var(--white);
+                outline-offset: 3px;
+            }
+
+            .about-slider-viewport {
+                touch-action: pan-y;
+            }
+
+            .clinical-service-media {
+                aspect-ratio: 16 / 9;
+            }
+
+            .about-slider-dot {
+                position: relative;
+                width: 44px;
+                height: 44px;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+            }
+
+            .about-slider-dot::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 10px;
+                border: 1px solid var(--gray-border);
+                border-radius: 50%;
+                background: var(--white);
+                content: '';
+                transform: translate(-50%, -50%);
+            }
+
+            .about-slider-dot.is-active {
+                width: 54px;
+                border: 0;
+                border-radius: 0;
+                background: transparent;
+            }
+
+            .about-slider-dot.is-active::before {
+                width: 30px;
+                border-color: var(--primary-red);
+                border-radius: 999px;
+                background: var(--primary-red);
+            }
+
+            .about-slider-dot:hover,
+            .about-slider-dot:focus-visible {
+                border-color: transparent;
+                background: transparent;
+            }
+
+            .about-slider-dot:focus-visible::before {
+                outline: 2px solid var(--primary-red);
+                outline-offset: 3px;
+            }
+
+            .footer-service-area span {
+                min-width: 0;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .clinical-services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .home-carousel,
+            .carousel-slide {
+                min-height: 0;
+            }
+
+            .carousel-slide {
+                display: block;
+                background-color: var(--dark-black);
+            }
+
+            .carousel-background {
+                position: relative;
+                inset: auto;
+                z-index: 0;
+                width: 100%;
+                height: auto;
+                min-height: 0;
+                aspect-ratio: 1672 / 941;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .carousel-background::after {
+                background: linear-gradient(180deg, rgba(17, 17, 17, 0.06) 0%, rgba(17, 17, 17, 0.12) 62%, rgba(17, 17, 17, 0.34) 100%);
+            }
+
+            .carousel-content {
+                z-index: 1;
+                padding: 26px 0 calc(6.25rem + env(safe-area-inset-bottom));
+                background: var(--dark-black);
+            }
+
+            .carousel-copy {
+                max-width: none;
+                text-shadow: none;
+            }
+
+            .carousel-eyebrow {
+                margin-bottom: 10px;
+                font-size: 0.72rem;
+                letter-spacing: 1.2px;
+            }
+
+            .carousel-eyebrow::after {
+                width: 46px;
+                height: 3px;
+                margin-top: 6px;
+            }
+
+            .carousel-title {
+                margin-bottom: 14px;
+                font-size: clamp(2rem, 9vw, 2.75rem);
+                line-height: 1.03;
+                letter-spacing: -0.8px;
+            }
+
+            .carousel-description {
+                margin-bottom: 22px;
+                font-size: 1rem;
+                line-height: 1.55;
+            }
+
+            .carousel-copy .btn {
+                width: 100%;
+                max-width: 320px;
+                min-height: 48px;
+            }
+
+            .carousel-controls {
+                right: 5%;
+                bottom: calc(12px + env(safe-area-inset-bottom));
+                left: 5%;
+                gap: 4px;
+            }
+
+            .carousel-control-group {
+                gap: 6px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                gap: 6px;
+                padding: 8px 0;
+            }
+
+            .brand-logo-img {
+                height: 62px;
+            }
+
+            .nav-actions {
+                gap: 6px;
+                flex-shrink: 0;
+            }
+
+            .discovery-call {
+                gap: 5px;
+                min-height: 44px;
+                padding: 6px 7px;
+                font-size: 0.7rem;
+            }
+
+            .carousel-title {
+                font-size: clamp(2rem, 9vw, 2.55rem);
+            }
+
+            .carousel-controls {
+                right: 4%;
+                bottom: calc(10px + env(safe-area-inset-bottom));
+                left: 4%;
+            }
+
+            .carousel-dots {
+                gap: 0;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .brand-logo-img {
+                height: 54px;
+            }
+
+            .nav-actions {
+                gap: 4px;
+            }
+
+            .discovery-call {
+                padding: 6px;
+                font-size: 0.67rem;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+            .home-carousel,
+            .carousel-slide {
+                min-height: clamp(30rem, 76svh, 36rem);
+            }
+
+            .carousel-content {
+                padding-top: 3rem;
+            }
+        }
+
+        @media (hover: none) {
+            .clinical-service-card:hover,
+            .shop-card:hover {
+                box-shadow: var(--shadow-sm);
+                transform: none;
             }
         }
     </style>
@@ -2761,10 +3081,14 @@
                 const status = carousel.querySelector('[data-carousel-status]');
                 const carouselBackgrounds = slides.map((slide) => slide.querySelector('[data-carousel-image]'));
                 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+                const compactViewport = window.matchMedia('(max-width: 768px)');
+                const networkConnection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+                const shouldConserveData = networkConnection?.saveData === true || /(^|-)2g/.test(networkConnection?.effectiveType || '');
                 let currentSlide = 0;
                 let autoSlideTimer;
                 let isUserPaused = false;
                 let touchStartX = 0;
+                let touchStartY = 0;
 
                 const stopAutoSlide = () => {
                     window.clearInterval(autoSlideTimer);
@@ -2844,9 +3168,11 @@
                         status.textContent = `Showing slide ${slides[currentSlide].getAttribute('aria-label')}`;
                     }
 
-                    window.setTimeout(() => {
-                        loadCarouselImage((currentSlide + 1) % slides.length);
-                    }, 300);
+                    if (!shouldConserveData) {
+                        window.setTimeout(() => {
+                            loadCarouselImage((currentSlide + 1) % slides.length);
+                        }, compactViewport.matches ? 1600 : 300);
+                    }
                 };
 
                 previousButton?.addEventListener('click', () => {
@@ -2899,12 +3225,22 @@
                 });
 
                 carouselViewport?.addEventListener('touchstart', (event) => {
-                    touchStartX = event.changedTouches[0].clientX;
+                    const touch = event.changedTouches[0];
+                    if (!touch) {
+                        return;
+                    }
+                    touchStartX = touch.clientX;
+                    touchStartY = touch.clientY;
                 }, { passive: true });
 
                 carouselViewport?.addEventListener('touchend', (event) => {
-                    const swipeDistance = event.changedTouches[0].clientX - touchStartX;
-                    if (Math.abs(swipeDistance) < 40) {
+                    const touch = event.changedTouches[0];
+                    if (!touch) {
+                        return;
+                    }
+                    const swipeDistance = touch.clientX - touchStartX;
+                    const verticalDistance = touch.clientY - touchStartY;
+                    if (Math.abs(swipeDistance) < 48 || Math.abs(swipeDistance) <= Math.abs(verticalDistance)) {
                         return;
                     }
                     showSlide(swipeDistance > 0 ? currentSlide - 1 : currentSlide + 1);
@@ -2952,6 +3288,7 @@
                 const aboutStatus = aboutSlider.querySelector('[data-about-status]');
                 let currentAboutSlide = 0;
                 let aboutTouchStartX = 0;
+                let aboutTouchStartY = 0;
 
                 const showAboutSlide = (requestedIndex) => {
                     currentAboutSlide = (requestedIndex + aboutSlides.length) % aboutSlides.length;
@@ -2999,12 +3336,22 @@
                 });
 
                 aboutViewport?.addEventListener('touchstart', (event) => {
-                    aboutTouchStartX = event.changedTouches[0].clientX;
+                    const touch = event.changedTouches[0];
+                    if (!touch) {
+                        return;
+                    }
+                    aboutTouchStartX = touch.clientX;
+                    aboutTouchStartY = touch.clientY;
                 }, { passive: true });
 
                 aboutViewport?.addEventListener('touchend', (event) => {
-                    const swipeDistance = event.changedTouches[0].clientX - aboutTouchStartX;
-                    if (Math.abs(swipeDistance) >= 40) {
+                    const touch = event.changedTouches[0];
+                    if (!touch) {
+                        return;
+                    }
+                    const swipeDistance = touch.clientX - aboutTouchStartX;
+                    const verticalDistance = touch.clientY - aboutTouchStartY;
+                    if (Math.abs(swipeDistance) >= 48 && Math.abs(swipeDistance) > Math.abs(verticalDistance)) {
                         showAboutSlide(swipeDistance > 0 ? currentAboutSlide - 1 : currentAboutSlide + 1);
                     }
                 }, { passive: true });
