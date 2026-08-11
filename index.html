@@ -11,12 +11,12 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
     <meta property="og:description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
-    <meta property="og:image" content="assets/smlogo.png">
+    <meta property="og:image" content="assets/SMfinal2.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
     <meta name="twitter:description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
-    <link rel="icon" type="image/png" href="assets/smlogo.png">
-    <link rel="apple-touch-icon" href="assets/smlogo.png">
+    <link rel="icon" type="image/png" href="assets/SMfinal2.png">
+    <link rel="apple-touch-icon" href="assets/SMfinal2.png">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -249,7 +249,7 @@
         }
 
         .brand-logo-img {
-            height: 82px;
+            height: 92px;
             width: auto;
             display: block;
         }
@@ -1454,6 +1454,12 @@
             text-align: center;
         }
 
+        .form-response a {
+            color: var(--primary-red);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
         /* --- Service Area Map --- */
         #serviceAreaMap {
             width: 100%;
@@ -1783,7 +1789,7 @@
                 padding: 24px 22px;
             }
             .brand-logo-img {
-                height: 68px;
+                height: 76px;
             }
             .nav-actions {
                 gap: 8px;
@@ -1885,7 +1891,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="#home">
-                <img src="assets/smlogo.png" alt="Source Motion Physical Therapy Logo" class="brand-logo-img">
+                <img src="assets/SMfinal2.png" alt="Source Motion Physical Therapy Logo" class="brand-logo-img">
             </a>
             
             <nav class="nav-links" id="navLinks">
@@ -2462,7 +2468,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Submit Appointment Request</button>
-                    <div id="formResponse" class="form-response"></div>
+                    <div id="formResponse" class="form-response" role="status" aria-live="polite"></div>
                 </form>
             </div>
         </div>
@@ -2485,7 +2491,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div>
-                <img src="assets/smlogo.png" alt="Source Motion Logo" class="footer-logo">
+                <img src="assets/SMfinal2.png" alt="Source Motion Logo" class="footer-logo">
                 <p style="font-size: 0.9rem; margin-top: 10px;">Source Motion Physical Therapy provides evidence-based physical therapy care led by Dr. Monika Pokhrel, PT, DPT in Raleigh, North Carolina.</p>
             </div>
 
@@ -2912,7 +2918,7 @@
                     }
 
                     formResponse.style.color = '#2B2D42';
-                    formResponse.textContent = `Thank you, ${name}. Your appointment request has been submitted. Dr. Monika Pokhrel, PT, DPT's office will reach out shortly.`;
+                    formResponse.innerHTML = 'Thank you for your interest in scheduling an appointment. This online booking page is currently under construction. To book an appointment, please call Dr. Monika Pokhrel, PT, DPT\'s office at <a href="tel:+19108904518">(910) 890-4518</a>.';
 
                     bookingForm.reset();
                 });
