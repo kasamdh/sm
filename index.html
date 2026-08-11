@@ -3,26 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC</title>
-    <meta name="description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
-    <meta name="keywords" content="physical therapy Raleigh NC, physical therapy Fuquay-Varina NC, physical therapy Holly Springs NC, physical therapy Angier NC, physical therapy Willow Spring NC, physical therapy Apex NC, physical therapy Garner NC, physical therapy Clayton NC, physical therapy Duncan NC, physical therapy Lillington NC, physical therapy Morrisville NC, home-based physical therapy, cash-based physical therapy, orthopedic rehabilitation, sports injury rehab">
+    <title>Physical Therapy in Fuquay-Varina, NC | Source Motion PT</title>
+    <meta name="description" content="One-on-one physical therapy in Fuquay-Varina, NC. Dry needling, orthopedic, pelvic floor, neurological and post-surgical rehabilitation.">
+    <link rel="canonical" href="https://www.sourcemotionpt.com/">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#D90429">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
-    <meta property="og:description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
-    <meta property="og:image" content="assets/SMfinal2.png">
+    <meta property="og:url" content="https://www.sourcemotionpt.com/">
+    <meta property="og:site_name" content="Source Motion Physical Therapy">
+    <meta property="og:title" content="Physical Therapy in Fuquay-Varina, NC | Source Motion PT">
+    <meta property="og:description" content="One-on-one physical therapy in Fuquay-Varina, NC. Dry needling, orthopedic, pelvic floor, neurological and post-surgical rehabilitation.">
+    <meta property="og:image" content="https://www.sourcemotionpt.com/assets/SMfinal2.png">
+    <meta property="og:image:alt" content="Source Motion Physical Therapy logo">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Source Motion Physical Therapy | Raleigh &amp; Fuquay-Varina, NC">
-    <meta name="twitter:description" content="Personalized physical therapy and injury rehabilitation serving Fuquay-Varina, Holly Springs, Angier, Willow Spring, Apex, Garner, Raleigh, Clayton, Duncan, Lillington, and Morrisville, NC.">
+    <meta name="twitter:title" content="Physical Therapy in Fuquay-Varina, NC | Source Motion PT">
+    <meta name="twitter:description" content="One-on-one physical therapy in Fuquay-Varina, NC. Dry needling, orthopedic, pelvic floor, neurological and post-surgical rehabilitation.">
+    <meta name="twitter:image" content="https://www.sourcemotionpt.com/assets/SMfinal2.png">
+    <meta name="twitter:image:alt" content="Source Motion Physical Therapy logo">
     <link rel="icon" type="image/png" href="assets/SMfinal2.png">
     <link rel="apple-touch-icon" href="assets/SMfinal2.png">
+    <link rel="preload" as="image" href="assets/images/hero-pelvic-floor.jpg" fetchpriority="high">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalBusiness",
+          "@id": "https://www.sourcemotionpt.com/#business",
+          "name": "Source Motion Physical Therapy",
+          "url": "https://www.sourcemotionpt.com/",
+          "logo": "https://www.sourcemotionpt.com/assets/SMfinal2.png",
+          "image": "https://www.sourcemotionpt.com/assets/SMfinal2.png",
+          "telephone": "+1-910-890-4518",
+          "email": "info@sourcemotionpt.com",
+          "founder": {
+            "@type": "Person",
+            "name": "Dr. Monika Pokhrel, PT, DPT",
+            "jobTitle": "Physical Therapist"
+          },
+          "sameAs": [
+            "https://www.facebook.com/people/Source-Motion-Physical-Therapy/61592243127452/",
+            "https://www.instagram.com/sourcemotionpt/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.sourcemotionpt.com/#website",
+          "url": "https://www.sourcemotionpt.com/",
+          "name": "Source Motion Physical Therapy",
+          "publisher": {
+            "@id": "https://www.sourcemotionpt.com/#business"
+          }
+        }
+      ]
+    }
+    </script>
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Leaflet map styles -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -468,6 +512,17 @@
             color: var(--primary-red);
         }
 
+        .home-brand-location {
+            display: block;
+            margin-top: 7px;
+            color: var(--text-muted);
+            font-size: 0.3em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
         /* --- Full-Width Home Carousel --- */
         .home-carousel {
             position: relative;
@@ -517,37 +572,31 @@
 
         .carousel-background-pelvic {
             background-color: #38111C;
-            background-image: url('assets/images/hero-pelvic-floor.png');
             background-position: center 42%;
         }
 
         .carousel-background-ortho {
             background-color: #17202B;
-            background-image: url('assets/images/hero-orthopedic-rehab.png');
             background-position: center;
         }
 
         .carousel-background-dry-needling {
             background-color: #183028;
-            background-image: url('assets/images/hero-dry-needling.png');
             background-position: center;
         }
 
         .carousel-background-exercise {
             background-color: #25183B;
-            background-image: url('assets/images/hero-exercise-rehab.png');
             background-position: center;
         }
 
         .carousel-background-cardiopulmonary {
             background-color: #2A2420;
-            background-image: url('assets/images/hero-cardiopulmonary-rehab.png');
             background-position: center;
         }
 
         .carousel-background-stroke {
             background-color: #1D2A35;
-            background-image: url('assets/images/hero-stroke-rehabilitation.png');
             background-position: center;
         }
 
@@ -1047,6 +1096,11 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .carousel-track,
             .about-slider-track {
                 transition: none;
             }
@@ -1456,6 +1510,49 @@
 
         .form-response a {
             color: var(--primary-red);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .appointment-callout {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .appointment-callout-icon {
+            display: inline-grid;
+            width: 54px;
+            height: 54px;
+            margin-bottom: 16px;
+            place-items: center;
+            border-radius: 50%;
+            background: #FDE8EC;
+            color: var(--primary-red);
+            font-size: 1.45rem;
+        }
+
+        .appointment-callout h3 {
+            margin-bottom: 12px;
+            color: var(--dark-black);
+            font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+        }
+
+        .appointment-callout p {
+            max-width: 620px;
+            margin: 0 auto 22px;
+            color: var(--text-muted-surface);
+        }
+
+        .appointment-callout-email {
+            margin-top: 18px !important;
+            margin-bottom: 0 !important;
+            font-size: 0.9rem;
+        }
+
+        .appointment-callout-email a {
+            color: var(--primary-red);
+            font-weight: 700;
             text-decoration: underline;
             text-underline-offset: 3px;
         }
@@ -1891,7 +1988,7 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="#home">
-                <img src="assets/SMfinal2.png" alt="Source Motion Physical Therapy Logo" class="brand-logo-img">
+                <img src="assets/SMfinal2.png" alt="Source Motion Physical Therapy Logo" class="brand-logo-img" width="1692" height="929">
             </a>
             
             <nav class="nav-links" id="navLinks">
@@ -1911,8 +2008,7 @@
             </nav>
 
             <div class="nav-actions">
-                <!-- Replace this URL with the clinic's Calendly event link when available. -->
-                <a href="https://calendly.com/" class="btn btn-primary discovery-call" target="_blank" rel="noopener noreferrer" aria-label="Schedule a 15-minute free discovery call"><i class="fa-solid fa-calendar-check"></i><span class="call-label-full"><span>15-Minute Free</span><span>Discovery Call</span></span><span class="call-label-short"><span>15-Min Free</span><span>Discovery Call</span></span></a>
+                <a href="tel:+19108904518" class="btn btn-primary discovery-call" aria-label="Call Dr. Monika Pokhrel, PT, DPT for a 15-minute free discovery call"><i class="fa-solid fa-phone"></i><span class="call-label-full"><span>15-Minute Free</span><span>Discovery Call</span></span><span class="call-label-short"><span>15-Min Free</span><span>Discovery Call</span></span></a>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -1923,7 +2019,7 @@
     <!-- Static brand name: intentionally outside the moving slider -->
     <div class="home-brand-bar">
         <div class="container">
-            <h1 class="home-brand-name">Source Motion <span>Physical Therapy</span></h1>
+            <h1 class="home-brand-name">Source Motion <span>Physical Therapy</span><small class="home-brand-location">Fuquay-Varina, North Carolina</small></h1>
         </div>
     </div>
 
@@ -1932,7 +2028,7 @@
         <div class="carousel-viewport">
             <div class="carousel-track" data-carousel-track>
                 <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="1 of 6: Pelvic Floor Physical Therapy">
-                    <div class="carousel-background carousel-background-pelvic"></div>
+                    <div class="carousel-background carousel-background-pelvic" data-carousel-image="assets/images/hero-pelvic-floor.jpg" data-image-loaded="true" style="background-image: url('assets/images/hero-pelvic-floor.jpg');"></div>
                     <div class="carousel-content">
                         <div class="container">
                             <div class="carousel-copy">
@@ -1946,7 +2042,7 @@
                 </article>
 
                 <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="2 of 6: Orthopedic Care" aria-hidden="true">
-                    <div class="carousel-background carousel-background-ortho"></div>
+                    <div class="carousel-background carousel-background-ortho" data-carousel-image="assets/images/hero-orthopedic-rehab.jpg"></div>
                     <div class="carousel-content">
                         <div class="container">
                             <div class="carousel-copy">
@@ -1960,7 +2056,7 @@
                 </article>
 
                 <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="3 of 6: Dry Needling" aria-hidden="true">
-                    <div class="carousel-background carousel-background-dry-needling"></div>
+                    <div class="carousel-background carousel-background-dry-needling" data-carousel-image="assets/images/hero-dry-needling.jpg"></div>
                     <div class="carousel-content">
                         <div class="container">
                             <div class="carousel-copy">
@@ -1974,7 +2070,7 @@
                 </article>
 
                 <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="4 of 6: Exercise and Rehabilitation" aria-hidden="true">
-                    <div class="carousel-background carousel-background-exercise"></div>
+                    <div class="carousel-background carousel-background-exercise" data-carousel-image="assets/images/hero-exercise-rehab.jpg"></div>
                     <div class="carousel-content">
                         <div class="container">
                             <div class="carousel-copy">
@@ -1988,7 +2084,7 @@
                 </article>
 
                 <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="5 of 6: Cardiopulmonary Rehabilitation for COPD" aria-hidden="true">
-                    <div class="carousel-background carousel-background-cardiopulmonary"></div>
+                    <div class="carousel-background carousel-background-cardiopulmonary" data-carousel-image="assets/images/hero-cardiopulmonary-rehab.jpg"></div>
                     <div class="carousel-content">
                         <div class="container">
                             <div class="carousel-copy">
@@ -2002,7 +2098,7 @@
                 </article>
 
                 <article class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="6 of 6: Stroke Rehabilitation" aria-hidden="true">
-                    <div class="carousel-background carousel-background-stroke"></div>
+                    <div class="carousel-background carousel-background-stroke" data-carousel-image="assets/images/hero-stroke-rehabilitation.jpg"></div>
                     <div class="carousel-content">
                         <div class="container">
                             <div class="carousel-copy">
@@ -2089,7 +2185,7 @@
             </div>
 
             <figure class="about-profile-card">
-                <img src="assets/images/monika.jpg" alt="Dr. Monika Pokhrel, PT, DPT" class="about-profile-image">
+                <img src="assets/images/monika.jpg" alt="Dr. Monika Pokhrel, PT, DPT" class="about-profile-image" width="800" height="800">
                 <figcaption class="about-profile-name">Dr. Monika Pokhrel, PT, DPT</figcaption>
             </figure>
         </div>
@@ -2139,7 +2235,7 @@
             <div class="clinical-services-grid">
                 <article class="clinical-service-card clinical-service-card--pelvic">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-pelvic-floor.png" alt="Woman receiving supportive pelvic floor physical therapy" width="1600" height="900" fetchpriority="high">
+                        <img src="assets/images/hero-pelvic-floor.jpg" alt="Woman receiving supportive pelvic floor physical therapy" width="1600" height="900" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Women's &amp; Pelvic Health</h3>
@@ -2155,7 +2251,7 @@
 
                 <article class="clinical-service-card">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-orthopedic-rehab.png" alt="Physical therapist guiding orthopedic rehabilitation" width="1600" height="900" loading="lazy" decoding="async">
+                        <img src="assets/images/hero-orthopedic-rehab.jpg" alt="Physical therapist guiding orthopedic rehabilitation" width="1600" height="900" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Orthopedic Therapy &amp; Manual Care</h3>
@@ -2172,7 +2268,7 @@
 
                 <article class="clinical-service-card">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-exercise-rehab.png" alt="Guided exercise rehabilitation session" width="1600" height="900" loading="lazy" decoding="async">
+                        <img src="assets/images/hero-exercise-rehab.jpg" alt="Guided exercise rehabilitation session" width="1600" height="900" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Sports Injury &amp; Functional Strength</h3>
@@ -2189,7 +2285,7 @@
 
                 <article class="clinical-service-card">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-orthopedic-rehab.png" alt="Hands-on rehabilitation support following an orthopedic procedure" width="1600" height="900" loading="lazy" decoding="async">
+                        <img src="assets/images/hero-orthopedic-rehab.jpg" alt="Hands-on rehabilitation support following an orthopedic procedure" width="1600" height="900" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Post-Surgical Rehabilitation</h3>
@@ -2206,7 +2302,7 @@
 
                 <article class="clinical-service-card">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-exercise-rehab.png" alt="Therapeutic exercise supporting mobility and balance" width="1600" height="900" loading="lazy" decoding="async">
+                        <img src="assets/images/hero-exercise-rehab.jpg" alt="Therapeutic exercise supporting mobility and balance" width="1600" height="900" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Neurological, Gait &amp; Balance Rehabilitation</h3>
@@ -2223,7 +2319,7 @@
 
                 <article class="clinical-service-card clinical-service-card--stroke">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-stroke-rehabilitation.png" alt="Physical therapist supporting an adult during stroke rehabilitation gait and balance practice" width="1672" height="941" loading="lazy" decoding="async">
+                        <img src="assets/images/hero-stroke-rehabilitation.jpg" alt="Physical therapist supporting an adult during stroke rehabilitation gait and balance practice" width="1672" height="941" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Stroke Rehabilitation</h3>
@@ -2240,7 +2336,7 @@
 
                 <article class="clinical-service-card">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-dry-needling.png" alt="Focused dry needling treatment for muscle tension" width="1600" height="900" loading="lazy" decoding="async">
+                        <img src="assets/images/hero-dry-needling.jpg" alt="Focused dry needling treatment for muscle tension" width="1600" height="900" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Dry Needling &amp; Persistent Pain</h3>
@@ -2305,7 +2401,7 @@
 
                 <article class="clinical-service-card clinical-service-card--cardiopulmonary">
                     <div class="clinical-service-media">
-                        <img src="assets/images/hero-cardiopulmonary-rehab.png" alt="Physical therapist guiding an older adult through gentle cardiopulmonary rehabilitation exercise" width="1672" height="941" loading="lazy" decoding="async">
+                        <img src="assets/images/hero-cardiopulmonary-rehab.jpg" alt="Physical therapist guiding an older adult through gentle cardiopulmonary rehabilitation exercise" width="1672" height="941" loading="lazy" decoding="async">
                     </div>
                     <div class="clinical-service-content">
                         <h3>Cardiopulmonary Rehabilitation (COPD)</h3>
@@ -2433,43 +2529,12 @@
                 <h2 id="appointment-title">Appointment Booking</h2>
                 <div class="divider-red"></div>
             </div>
-            <div class="appointment-panel" id="appointment">
-                <form id="bookingForm">
-                    <div class="form-group">
-                        <label for="fullName">Patient Full Name *</label>
-                        <input type="text" id="fullName" required placeholder="John Doe">
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" required placeholder="(910) 000-0000">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" required placeholder="patient@example.com">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">Reason for Visit</label>
-                        <select id="service">
-                            <option value="general">Initial Physical Therapy Assessment</option>
-                            <option value="orthopedics">Joint / Spine Pain</option>
-                            <option value="sports">Sports Injury Rehabilitation</option>
-                            <option value="post-op">Post-Surgical Rehabilitation</option>
-                            <option value="consult">Other / Clinical Consultation</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Symptoms or Goals Description</label>
-                        <textarea id="message" rows="4" placeholder="Briefly explain your symptoms or treatment goals..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Submit Appointment Request</button>
-                    <div id="formResponse" class="form-response" role="status" aria-live="polite"></div>
-                </form>
+            <div class="appointment-panel appointment-callout" id="appointment">
+                <div class="appointment-callout-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
+                <h3>Schedule by Phone</h3>
+                <p>Online appointment booking is currently under construction. To schedule an appointment, please call Dr. Monika Pokhrel, PT, DPT&rsquo;s office.</p>
+                <a href="tel:+19108904518" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call (910) 890-4518</a>
+                <p class="appointment-callout-email">Prefer email? <a href="https://outlook.office.com/mail/deeplink/compose?to=info%40sourcemotionpt.com" target="_blank" rel="noopener noreferrer">Contact the office by email</a>.</p>
             </div>
         </div>
     </section>
@@ -2491,7 +2556,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div>
-                <img src="assets/SMfinal2.png" alt="Source Motion Logo" class="footer-logo">
+                <img src="assets/SMfinal2.png" alt="Source Motion Logo" class="footer-logo" width="1692" height="929">
                 <p style="font-size: 0.9rem; margin-top: 10px;">Source Motion Physical Therapy provides evidence-based physical therapy care led by Dr. Monika Pokhrel, PT, DPT in Raleigh, North Carolina.</p>
             </div>
 
@@ -2605,7 +2670,12 @@
             // Interactive service-area map
             const serviceAreaMapElement = document.getElementById('serviceAreaMap');
 
-            if (serviceAreaMapElement && window.L) {
+            const initializeServiceAreaMap = () => {
+                if (!serviceAreaMapElement || !window.L || serviceAreaMapElement.dataset.mapInitialized === 'true') {
+                    return;
+                }
+
+                serviceAreaMapElement.dataset.mapInitialized = 'true';
                 const serviceLocations = [
                     { name: 'Fuquay-Varina', coordinates: [35.5840, -78.8000] },
                     { name: 'Holly Springs', coordinates: [35.651266, -78.833622] },
@@ -2650,6 +2720,21 @@
                     maxZoom: 11
                 });
                 window.L.control.scale({ imperial: true, metric: false }).addTo(serviceAreaMap);
+            };
+
+            if (serviceAreaMapElement && window.L) {
+                if ('IntersectionObserver' in window) {
+                    const mapObserver = new IntersectionObserver((entries, observer) => {
+                        if (entries.some((entry) => entry.isIntersecting)) {
+                            observer.disconnect();
+                            initializeServiceAreaMap();
+                        }
+                    }, { rootMargin: '300px 0px' });
+
+                    mapObserver.observe(serviceAreaMapElement);
+                } else {
+                    initializeServiceAreaMap();
+                }
             }
 
             // Full-width home carousel
@@ -2664,6 +2749,7 @@
                 const nextButton = carousel.querySelector('[data-carousel-next]');
                 const pauseButton = carousel.querySelector('[data-carousel-pause]');
                 const status = carousel.querySelector('[data-carousel-status]');
+                const carouselBackgrounds = slides.map((slide) => slide.querySelector('[data-carousel-image]'));
                 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
                 let currentSlide = 0;
                 let autoSlideTimer;
@@ -2700,8 +2786,21 @@
                         : '<i class="fa-solid fa-pause"></i>';
                 };
 
+                const loadCarouselImage = (index) => {
+                    const background = carouselBackgrounds[index];
+                    const imageSource = background?.dataset.carouselImage;
+
+                    if (!background || !imageSource || background.dataset.imageLoaded === 'true') {
+                        return;
+                    }
+
+                    background.style.backgroundImage = `url("${imageSource}")`;
+                    background.dataset.imageLoaded = 'true';
+                };
+
                 const showSlide = (requestedIndex) => {
                     currentSlide = (requestedIndex + slides.length) % slides.length;
+                    loadCarouselImage(currentSlide);
                     carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
 
                     slides.forEach((slide, index) => {
@@ -2734,6 +2833,10 @@
                     if (status) {
                         status.textContent = `Showing slide ${slides[currentSlide].getAttribute('aria-label')}`;
                     }
+
+                    window.setTimeout(() => {
+                        loadCarouselImage((currentSlide + 1) % slides.length);
+                    }, 300);
                 };
 
                 previousButton?.addEventListener('click', () => {
@@ -2899,30 +3002,6 @@
                 showAboutSlide(0);
             }
 
-            // Appointment Form submission handler
-            const bookingForm = document.getElementById('bookingForm');
-            const formResponse = document.getElementById('formResponse');
-
-            if (bookingForm) {
-                bookingForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-
-                    const name = document.getElementById('fullName').value.trim();
-                    const phone = document.getElementById('phone').value.trim();
-                    const email = document.getElementById('email').value.trim();
-
-                    if (!name || !phone || !email) {
-                        formResponse.style.color = '#D90429';
-                        formResponse.textContent = 'Please complete all required fields.';
-                        return;
-                    }
-
-                    formResponse.style.color = '#2B2D42';
-                    formResponse.innerHTML = 'Thank you for your interest in scheduling an appointment. This online booking page is currently under construction. To book an appointment, please call Dr. Monika Pokhrel, PT, DPT\'s office at <a href="tel:+19108904518">(910) 890-4518</a>.';
-
-                    bookingForm.reset();
-                });
-            }
         });
     </script>
 </body>
